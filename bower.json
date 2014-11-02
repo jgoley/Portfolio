@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "neat": "~1.7.0"
+  },
+  "devDependencies": {}
+}
