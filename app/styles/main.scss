@@ -1,15 +1,15 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
-$gutter: em(10px);
+$gutter: em(15px);
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
-$primary: RGBA(35, 65, 125, 1);
+$primary: RGBA(255, 210, 93, 1);
 $primaryTrans: RGBA(35, 65, 125, 0.2);
 $secondary: #23417d;
 
-$tablet: new-breakpoint(max-width 700px);
-$desktop: new-breakpoint(max-width 1000px);
+$tablet: new-breakpoint(min-width 600px max-width 1000px);
+$desktop: new-breakpoint(min-width 1000px);
 
 @mixin fillParent {
     display: block;
@@ -32,8 +32,18 @@ body {
     margin: 0;
     padding: 0;
     font-size: 100%;
-    @extend .oswald;
+    @extend .openSans;
     color: #333;
+}
+
+a {
+    color: $secondary;
+    text-decoration: none;
+    transition: .2s;
+    &:hover {
+        color: #333;
+        transition: .2s;
+    }
 }
 
 h1,
@@ -42,32 +52,8 @@ h3 {
     @extend .oswald;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: $primaryTrans;
-    margin: 0 auto;
-    z-index: 1000;
-    height: 30px;
-    padding: 2em;
-    h1 {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
-        margin: 0;
-        text-transform: uppercase;
-        color: $secondary;
-        text-shadow: 0 1px 0 rgba(250, 250, 250, 0.5);
-        letter-spacing: .05em;
-    }
-}
-
-.main-container {
-    $max-width: 100%;
-    @include outer-container;
-    margin-top: em(100px);
+p {
+    line-height: 1.5em;
 }
 
 ul {
@@ -76,34 +62,75 @@ ul {
     padding: 0;
 }
 
+section {
+    padding: 2em 0;
+}
+
+.about {
+    @include outer-container;
+    @include span-columns(10);
+    @include shift(1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    z-index: 1000;
+    padding: 2em;
+    border-bottom: 1px solid #ebebeb;
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    left: em(15px);
+    transform: translate(0, -50%);
+}
+
+.name {
+    font-size: 1.75em;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 10px;
+    top: 50%;
+    margin: 0;
+    text-transform: uppercase;
+    color: $secondary;
+    text-shadow: 0 1px 0 rgba(250, 250, 250, 0.5);
+    letter-spacing: .05em;
+}
+
+.main-container {
+    $max-width: 100%;
+    @include outer-container;
+    margin-top: em(100px);
+}
+
 nav {
+    display: none;
     $max-width: 1000px;
     @include outer-container;
     position: relative;
-    ul {
-        width: 30%;
-        position: absolute;
-        transform: translate(0, -50%);
-    }
+    ul {}
     li {
-        display: inline-block;
-        padding: 0 2em;
+        display: block;
     }
-    .left {
-        left: 0;
-        text-align: right;
-    }
-    .right {
-        right: 0;
+    a {
+        color: #999;
+        padding: 1em;
+        display: block;
+        background: #ebebeb;
+        border-bottom: 1px solid #FFF;
     }
 }
 
-a {
-    color: $secondary;
-    text-decoration: none;
-    &:hover {
-        color: $primary;
-    }
+.work-wrap {
+    @include outer-container;
 }
 
 .work {
@@ -112,14 +139,14 @@ a {
         // @include omega(3n);
         position: relative;
         height: 350px;
-        margin-bottom: em(10px);
+        margin-bottom: em(20px);
         overflow: hidden;
         background: url(../images/test.jpg) center center;
         background-size: cover;
         &::before {
             @include fillParent;
             content: "";
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.7);
         }
     }
     .details {
@@ -145,8 +172,10 @@ a {
         color: #FFF;
     }
     p {
-        padding: em(10px);
+        padding: em(10px) em(15px);
         margin: 0;
+        font-size: .9em;
+        font-weight: 200;
     }
     a {
         width: 50%;
@@ -171,9 +200,69 @@ a {
     }
 }
 
+.other-work {
+    padding: 5em 0;
+    $max-width: 100%;
+    @include outer-container;
+    background: $primary;
+}
+
+.other-work-wrapper {
+    @include span-columns(10);
+    @include shift(1);
+}
+
+footer {}
+
 @include media($tablet) {
+    header {
+        padding: 1em;
+    }
+    .name {
+        font-size: 2em;
+        transform: translate(0, -50%);
+        text-align: right;
+    }
+    .menu {
+        display: none;
+    }
+    nav {
+        display: block;
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+            }
+        }
+        a {
+            &:focus, &:active {
+                background: #DDD;
+                outline: 0;
+            }
+        }
+    }
     .work {
         > li {
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+}
+
+
+@include media($desktop) {
+    .name {
+        font-size: 2.25em;
+        transform: translate(0, -50%);
+        text-align: center;
+    }
+    .menu {
+        display: none;
+    }
+    .work {
+        > li {
+            @include span-columns(4);
+            @include omega(3n);
             &:hover {
                 .details {
                     height: 100%;
@@ -182,7 +271,42 @@ a {
                     }
                     background: rgba(0, 0, 0, 0.8);
                     color: #CCC;
+                    h3 {
+                        color: $primary;
+                    }
                 }
+            }
+        }
+    }
+    nav {
+        display: block;
+        $max-width: 1000px;
+        @include outer-container;
+        position: relative;
+        ul {
+            width: 30%;
+            position: absolute;
+            transform: translate(0, -50%);
+        }
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        .right {
+            right: 0;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            color: #999;
+            padding: 2em;
+            display: block;
+            background: none;
+            transition: .4s;
+            &:hover {
+                background: RGBA(245, 245, 245, 1);
+                transition: .4s;
             }
         }
     }
