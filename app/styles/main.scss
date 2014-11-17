@@ -4,9 +4,24 @@ $gutter: em(15px);
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
-$primary: RGBA(255, 210, 93, 1);
-$primaryTrans: RGBA(35, 65, 125, 0.2);
+// $primary: RGBA(255, 210, 93, 1);
+$primary: rgba(241, 147, 42, 1);
+$primaryTrans: rgba(241, 147, 42, .4);
 $secondary: #23417d;
+$secondary: rgba(32, 116, 152, 1);
+$secondaryTrans: rgba(32, 116, 152, .5);
+
+
+$orange: rgba(255, 99, 62, 1);
+$l-yellow: rgba(255, 214, 110, 1);
+$yellow: rgba(255, 200, 62, 1);
+$ll-blue: rgba(147, 215, 245, 1);
+$l-blue: rgba(112, 205, 245, 1);
+$blue: rgba(65, 184, 235, 1);
+$dark-blue: rgba(21, 113, 153, 1);
+
+$primaryBG: rgba(65, 184, 235, 1);
+$secondaryBG: rgba(248, 195, 135, 1);
 
 $tablet: new-breakpoint(min-width 600px max-width 1000px);
 $desktop: new-breakpoint(min-width 1000px);
@@ -20,12 +35,20 @@ $desktop: new-breakpoint(min-width 1000px);
     left: 0;
 }
 
+@font-face {
+    font-family: icons;
+    src: url(../fonts/icons.ttf);
+}
 .openSans {
     font-family: 'Open Sans', sans-serif;
 }
 
 .oswald {
     font-family: 'Oswald', sans-serif;
+}
+
+.icon{
+    font-family: icons, sans-serif;
 }
 
 body {

@@ -14,143 +14,206 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div class="main-container">
-            
-            <header>
-                <h1 class="name">Jonathan Goley</h1>
-                <a href="" class="menu">Menu</a>
-                <nav>
-                    <ul class="left">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Work</a></li>
-                    </ul>
-                    <ul class="right">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="http://blog.jonathangoley.com">Blog</a></li>
-                    </ul>
-                </nav>
-            </header>
+        </head>
+        <body>
+            <div class="main-container">
+                
+                <header>
+                    <h1 class="name">Jonathan Goley</h1>
+                    <!-- <a href="" class="menu">Menu</a> -->
+                    <nav class="main-nav">
+                        <ul class="left">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="http://blog.jonathangoley.com">Blog</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <section id="about" class="about">
+                    <div class="main-wrap">
+                        <h1 class="statement">
+                            <span class="web-dev">Web developer</span> with the <span class="mind">analytical mind of a <span>programmer</span></span> <br/> and the 
+                            <span class="artist">creativity of an <span>artist</span></span>
+                        </h1>
+                        <!-- <h2 class="skills-header">Skills</h2> -->
+                        <ul class="skills">
+                            <li><h3>JavaScript</h3> Backbone, Ember, JQuery</li>
+                            <li><h3>HTML5</h3>CSS3 (SASS) <sapn>mobile responsive development</sapn></li>
+                            <li><h3>PHP</h3> MySQL</li>
+                            <li><h3>UI/UX design</h3> Photoshop, Illustrator</li>
+                        </ul>
+                        
+                        <!--                     <div class="like">
+                            <h2>Like what you see?</h2>
+                            <a href="mailto:jgo@jonathangoley.com" class="contact-top">Send me a message</a>
+                        </div> -->
+                    </div>
+                </section>
+                
+                <section id="work" class="work-wrap">
+                    <div class="main-wrap work">
+                            <!-- Pollinate -->
+                            <div class="pollinate">
+                                <div class="details">
+                                    <h3>Pollinate</h3>
+                                    <p>An application that helps farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper's operation then make a request for hives. Users can review and message each other.</p>
+                                    <ul class="stack">
+                                        <li>Backbone.js</li>
+                                        <li>Parse (back-end)</li>
+                                        <li>HTML5</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="http://jgoley.github.io/Pollinate/" class="site">View Site</a>
+                                    <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">View Code</a>
+                                </div>
+                            </div>
+                            <!-- TAP -->
+                            <div class="tap">
+                                <div class="details">
+                                    <h3>TAP into CMA</h3>
+                                    <p>Web-based mobile tour application for the Columbia Museum of Art. The application allows the museum to offer an immersive multimedia (audio, video, imagery) expereince on in-house iPods and visitor mobile devices.</p>
+                                    <ul class="stack">
+                                        <li>PHP</li>
+                                        <li>MySQL</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="http://tours.columbiamuseum.org" class="site">View Site</a>
+                                    <a href="http://github.com/colamuseum/tap-into-cma" class="code">View Code</a>
+                                </div>
+                            </div>
+                            <!-- Chat App -->
+                            <div class="chat-app">
+                                <div class="details">
+                                    <h3>Crack Chatter</h3>
+                                    <p>A chat application developed with Ember.js and Firebase. Users can join chats, switch between rooms and create rooms.</p>
+                                    <ul class="stack">
+                                        <li>Ember.js</li>
+                                        <li>Firebase (back-end)</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="http://jgoley.github.io/TIY_22-Crack-Chat-App/" class="site">View Site</a>
+                                    <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">View Code</a>
+                                </div>
+                            </div>
+                            <!-- Photo Share -->
+                            <div class="photo-share">
+                                <div class="details">
+                                    <h3>Photo Share App</h3>
+                                    <p>An application allows users to share photos</p>
+                                    <ul class="stack">
+                                        <li>Backbone</li>
+                                        <li>Parse (back-end)</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="http://jgoley.github.io/TIY-24_photo-share-app" class="site">View Site</a>
+                                    <a href="https://github.com/jgoley/TIY-24_photo-share-app" class="code">View Code</a>
+                                </div>
+                            </div>
 
-            <section class="about">
-                <div class="main-wrap">
-                    <h1 class="statement">Web developer with the <span class="mind">analytical mind of a programmer</span> and the <span class="mind">creativity of an artist.</span></h1>
-                    <ul class="skills">
-                        <li>JavaScript (Backbone, Ember, JQuery)</li>
-                        <li>HTML5, CSS3 (SASS) <sapn>mobile responsive development</sapn></li>
-                        <li>PHP, MySQL</li>
-                        <li>GIT</li>
-                        <li>UI/UX design</li>
-                        <li>Photography &amp; Video Production</li>
-                    </ul>
+                            <!-- ONE X 100 -->
+<!--                             <div class="onex100">
+                                <div class="details">
+                                    <h3>ONE X 100</h3>
+                                    <p>A chat application developed with Ember.js and Firebase. Users can join and create rooms.</p>
+                                    <ul class="stack">
+                                        <li>PHP</li>
+                                        <li>MySQL</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="http://jgoley.github.io/TIY_22-Crack-Chat-App/" class="site">View Site</a>
+                                    <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">View Code</a>
+                                </div>
+                            </div> -->
+                            
+                            <!-- Be the Curator -->
+                            <div class="be-curator">
+                                <div class="details">
+                                    <h3>Be the Curator</h3>
+                                    <p>Application for a Kickstarter style online giving campaign.</p>
+                                    <ul class="stack">
+                                        <li>PHP</li>
+                                        <li>MySQL</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <a href="https://www.columbiamuseum.org/be-the-curator/" class="site">View Site</a>
+                                    <a href="http://github.com/colamuseum/tap-into-cma" class="code">View Code</a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="other-work">
+                        <div class="main-wrap">
+                            <h2>I Wear Many Hats...</h2>
+                            <div class="other-work-wrapper">
+                                <ul>
+                                    <li>Photography</li>
+                                    <li>Graphics</li>
+                                    <li>Video Production</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hats"></div>
+                    </div>
                     
-                    <div>
-                        <h2>Like what you see?</h2>
-                        <a href="mailto:jgo@jonathangoley.com">Send me a message</a>
+                </section>
+
+                <section id="contact" class="contact">
+                    <div class="main-wrap">
+                        <div class="contact-info">
+                            <h1>Contact Jonathan</h1>
+                            <ul class="contact">
+                                <li class="email">Email: <a href="mailto:jgoley@gmail.com">jgoley@gmail.com</a></li>
+                                <li class="twitter">Twitter: <a href="mailto:jgoley@gmail.com">jgoley@gmail.com</a></li>
+                                <li class="github">Github: <a href="mailto:jgoley@gmail.com">jgoley@gmail.com</a></li>
+                                <li class="linked">LinkedIn: <a href="mailto:jgoley@gmail.com">jgoley@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        <form class="send-message">
+                            <input type="text" name="fromName" placeholder="Your Name">
+                            <input type="text" name="fromEmail" placeholder="Your Email">
+                            <textarea name="message"></textarea>
+                            <input type="submit" value="Send Message">
+                        </form>
                     </div>
-                </div>
-            </section>
-            
-            <section class="work-wrap">
+                </section>
                 
-                <div class="work">
-
-                    <!-- Pollinate -->
-                    <div class="pollinate">
-                        <div class="details">
-                            <h3>Pollinate</h3>
-                            <p>An application that helps farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper's operation then make a request for hives. Users can review and message each other.</p>
-                            <ul class="stack">
-                                <li>Backbone</li>
-                                <li>Parse (back-end)</li>
-                                <li>HTML5</li>
-                            </ul>
-                        </div>
-                        <div class="links">
-                            <a href="jgoley.github.io/Pollinate/" class="site">View Site</a>
-                            <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">View Code</a>
-                        </div>
-                    </div>
-
-                    <!-- TAP -->
-                    <div class="tap">
-                        <div class="details">
-                            <h3>TAP into CMA</h3>
-                            <p>Health goth quinoa wolf, ethical deep v keffiyeh Echo Park drinking vinegar iPhone irony wayfarers put a bird on it mustache Helvetica cliche. You probably haven't heard of them cred kitsch, readymade salvia ugh Tumblr farm-to-table aesthetic chia.</p>
-                            <ul class="stack">
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                            </ul>
-                        </div>
-                        <div class="links">
-                            <a href="http://tours.columbiamuseum.org" class="site">View Site</a>
-                            <a href="http://github.com/colamuseum/tap-into-cma" class="code">View Code</a>
-                        </div>
-                    </div>
-
-                    <!-- Chat App -->
-                    <div class="chat-app">
-                        <div class="details">
-                            <h3>Crack Chatter</h3>
-                            <p>A chat application developed with Ember.js and Firebase. Users can join and create rooms.</p>
-                            <ul class="stack">
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                            </ul>
-                        </div>
-                        <div class="links">
-                            <a href="http://jgoley.github.io/TIY_22-Crack-Chat-App/" class="site">View Site</a>
-                            <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">View Code</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <section class="other-work">
-                <div class="other-work-wrapper">
+                <footer>
                     <ul>
-                        <li>Photography</li>
-                        <li>Graphics</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                     </ul>
-                </div>
-            </section>
-
-
-            <section class="contact">
-                
-            </section>
-            
-
-            <footer>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </footer>
-
-        </div>
-
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="js/main.js"></script>
-        <!-- endbuild -->
-
-    </body>
-</html>
+                </footer>
+            </div>
+            <!-- build:js scripts/vendor.js -->
+            <!-- bower:js -->
+            <script src="bower_components/jquery/dist/jquery.js"></script>
+            <script src="js/parse.js"></script>
+            <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+            <script src="js/nav.js"></script>
+            <!-- endbower -->
+            <!-- endbuild -->
+            <!-- build:js scripts/main.js -->
+            <script src="js/main.js"></script>
+            <!-- endbuild -->
+        </body>
+    </html>
