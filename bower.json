@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "jquery": "~1.11.0",
-    "neat": "~1.7.0"
+    "neat": "~1.7.0",
+    "jquery.scrollTo": "~1.4.13"
   },
   "devDependencies": {}
 }

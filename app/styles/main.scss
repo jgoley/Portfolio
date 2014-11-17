@@ -65,13 +65,22 @@ ul {
 }
 
 section {
-    padding: 2em 0;
+    $max-width: 100%;
+    @include outer-container;
+}
+
+.main-wrap{
+    $max-width: 1000px;
+    @include outer-container
 }
 
 .about {
-    @include outer-container;
-    @include span-columns(10);
-    @include shift(1);
+    padding-top: em(100px);
+    background:$primary;
+}
+
+.statement{
+    text-align: center;
 }
 
 header {
@@ -110,7 +119,6 @@ header {
 .main-container {
     $max-width: 100%;
     @include outer-container;
-    margin-top: em(100px);
 }
 
 nav {
@@ -133,12 +141,14 @@ nav {
 
 .work-wrap {
     @include outer-container;
+    margin-top:em(55px);
+    margin-bottom:em(55px);
 }
 
 .work {
-    > li {
+    > div {
         @include span-columns(12);
-        // @include omega(3n);
+        @include omega(3n);
         position: relative;
         height: 350px;
         margin-bottom: em(20px);
@@ -227,7 +237,10 @@ nav {
     @include shift(1);
 }
 
-footer {}
+footer {
+    padding:em(150px);
+    background:#999;
+}
 
 @include media($tablet) {
     header {
@@ -276,7 +289,7 @@ footer {}
         display: none;
     }
     .work {
-        > li {
+        > div {
             @include span-columns(4);
             @include omega(3n);
             &:hover {
