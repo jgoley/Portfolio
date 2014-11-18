@@ -61,11 +61,8 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-    return $.bowerFiles()
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-        .pipe($.flatten())
-        .pipe(gulp.dest('dist/fonts'))
-        .pipe($.size());
+    return gulp.src(['app/fonts/**.ttf'])
+      .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('extras', function () {
