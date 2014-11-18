@@ -70,8 +70,12 @@ gulp.task('extras', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
+gulp.task('clean', function (cb) {
+  return $.cache.clearAll(cb, function() {
+    return rimraf('.tmp', function () {
+      return rimraf('dist', cb);
+    });
+  });
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
