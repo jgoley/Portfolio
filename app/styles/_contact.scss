@@ -1,0 +1,120 @@
+.contact {
+    padding: em(50px) 0;
+    h1 {
+        font-size: 3em;
+        margin: 0 0 em(10px) 0;
+        line-height: 1.13em;
+    }
+}
+
+.contact-info {
+    @include span-columns(12);
+    text-align: center;
+    padding: 0 em(15px);
+}
+
+.contact {
+    h1 {}
+}
+
+.social {
+    margin-top: em(30px);
+    li {
+        display: block;
+        vertical-align: middle;
+        font-size: em(40px);
+        margin-right: em(5px);
+        // border-top:1px solid #ebebeb;
+    	// border-bottom:1px solid #ebebeb;
+    	// padding:em(2px) 0;
+    }
+    a{
+    	&::before{
+    		margin-right:em(5px);
+    	}
+    }
+}
+
+.email {
+    @include buildIcon('M');
+    // background: $yellow;
+    font-size: 150%;
+    border-top:1px solid #ebebeb;
+    border-bottom:1px solid #ebebeb;
+    padding:em(10px) 0;
+    display: block;
+    &::before{
+        vertical-align: middle;
+        margin-right: em(5px);
+        font-size: em(28px);
+    }
+}
+
+.github {
+    @include buildIcon("G");
+}
+
+.twitter {
+    @include buildIcon("T");
+}
+
+.linked {
+    @include buildIcon("L");
+}
+
+.send-message {
+    @include span-columns(12);
+    padding: 0 em(15px);
+    margin-top: 30px;
+    input, textarea {
+        width: 100%;
+        display: block;
+        min-height: em(40px);
+        padding: em(5px);
+        margin-bottom: em(20px);
+        display: block;
+        padding: 1em;
+        border-radius: 3px;
+        border: 1px solid #CCC;
+        box-shadow: inset 1px 1px 4px rgba(200, 200, 200, 0.3);
+        font-size: 1em;
+        outline: 0;
+        min-height: 2.75em;
+    }
+    textarea {
+        width: 100%;
+        min-height: em(200px);
+    }
+    input[type=submit] {
+        cursor: pointer;
+        background: $orange;
+        border: 0;
+        font-size: 1.2em;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: .5em 1.5em;
+        width: 100%;
+    }
+    label {
+        font-weight: bold;
+    }
+}
+
+// Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@include media($tablet) {}
+
+
+@include media($desktop) {
+    .contact-info {
+        text-align: left;
+        @include span-columns(5);
+    }
+    .send-message {
+        @include span-columns(7);
+        input, input[type=submit] {
+            width: 55%;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 0 auto;
+    z-index: 1000;
+    padding: 2em;
+    // border-bottom: 1px solid #ebebeb;
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    left: em(15px);
+    transform: translate(0, -50%);
+}
+
+.name {
+    font-size: 1.75em;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 10px;
+    top: 50%;
+    margin: 0;
+    text-transform: uppercase;
+    color: $orange;
+    text-shadow: 0 1px 0 rgba(250, 250, 250, 0.5);
+    letter-spacing: .05em;
+}
+
+.main-container {
+    $max-width: 100%;
+    @include outer-container;
+}
+
+nav {
+    display: none;
+    $max-width: 1000px;
+    @include outer-container;
+    position: relative;
+    li {
+        display: block;
+    }
+    a {
+        color: #999;
+        padding: 1em;
+        display: block;
+        background: #ebebeb;
+        border-bottom: 1px solid #FFF;
+
+    }
+}
+
+.current {
+    a {
+        background:  $blue;
+        transition: .4s;
+        color:#000;
+        text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    }
+}
+
+// Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@include media($tablet) {
+    header {
+        padding: 1em;
+    }
+    .name {
+        font-size: 2em;
+        transform: translate(0, -50%);
+        text-align: right;
+    }
+    .menu {
+        display: none;
+    }
+    nav {
+        display: block;
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+            }
+        }
+        a {
+            &:focus, &:active {
+                background: #DDD;
+                outline: 0;
+            }
+        }
+    }
+}
+
+
+@include media($desktop) {
+    .name {
+        font-size: 2.25em;
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+    .menu {
+        display: none;
+    }
+    nav {
+        display: block;
+        $max-width: 1000px;
+        @include outer-container;
+        position: relative;
+        ul {
+            width: 30%;
+            position: absolute;
+            transform: translate(0, -50%);
+        }
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        .right {
+            right: 0;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            color: #999;
+            padding: 2em;
+            display: block;
+            background: none;
+            transition: .4s;
+            &:hover {
+                background:  $blue;
+                transition: .4s;
+                color:#000;
+                text-shadow: 0 1px 0 rgba(255,255,255,.4);
+            }
+        }
+    }
+}

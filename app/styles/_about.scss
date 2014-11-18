@@ -1,0 +1,154 @@
+.about {
+    padding-top: em(120px);
+    // padding-bottom: em(100px);
+    background: $primaryBG; //url(../images/jg-2.jpg) center center;
+    background-size: cover;
+}
+
+.statement {
+    text-align: center;
+    margin-bottom: em(30px);
+    font-size: 200%;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    padding: 0 20px;
+    letter-spacing:.02em;
+
+}
+
+.skills-header {
+    border-bottom: 1px solid #FFF;
+    text-align: center;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.skills-wrap {
+    border-top: 1px solid #FFF;
+}
+
+.skills {
+    $max-width: $max;
+    @include outer-container;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    li {
+        @include span-columns(6);
+        @include omega;
+        border-bottom: 1px solid #FFF;
+        text-align: center;
+        min-height: 170px;
+        padding: em(15px);
+    }
+}
+
+.additional-wrap {
+    @include outer-container;
+    a{
+    	color:$text;
+    	&:hover{
+    		color:$l-yellow;
+    	}
+    }
+}
+
+.additional-info {
+    padding: em(50px) 0;
+    @include span-columns(12);
+    text-align: center;
+    font-size: 150%;
+    color: #FFF;
+    a {
+        &::before {
+            display: block;
+            font-size: 300%;
+        }
+    }
+}
+
+.resume {
+    @include span-columns(6, border-collapse);
+    @include buildIcon("r");
+    @include omega;
+}
+
+.bio {
+    @include span-columns(6, border-collapse);
+    @include buildIcon("i");
+    @include omega;
+}
+
+.bio-text {
+    @include outer-container;
+    @include span-columns(6);
+    @include shift(3);
+    margin-bottom: em(20px);
+}
+
+.like {
+    margin: em(50px);
+    text-align: center;
+}
+
+.web-dev {
+    display: block;
+    font-size: 150%;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: #333;
+}
+
+.mind,
+.artist {
+    // color: #FFF;
+    color: $l-yellow;
+    text-shadow: 0 1px 0 rgba(0,0,0,.3);	
+    // span {
+    //     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    //     color: $l-yellow;
+    // }
+}
+
+.contact-top {
+    background: $secondary;
+    text-align: center;
+    color: #FFF;
+    border-radius: 3px;
+    // display: block;
+    padding: em(15px) em(30px);
+    &:hover {
+        color: #FFF;
+    }
+    margin: 10px auto;
+}
+
+@include media($tablet) {}
+
+
+@include media($desktop) {
+    .skills-wrap {
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+    }
+    .skills {
+        li {
+            @include span-columns(3, block-collapse);
+            @include omega(0);
+            text-align: center;
+            border-bottom: 0;
+            border-right: 1px solid #FFF;
+            min-height: 150px;
+            padding: em(15px);
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+    .statement {
+        font-size: 250%;
+    }
+    .additional-info {
+        @include span-columns(8);
+        @include shift(2);
+        font-size: 150%;
+    }
+}

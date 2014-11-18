@@ -1,0 +1,81 @@
+.other-work {
+    padding: 1em 0 0 0;
+    $max-width: 100%;
+    @include outer-container;
+    background: $l-yellow;
+}
+
+.other-work-wrapper {
+    @include outer-container;
+}
+
+.hats {
+    background: url(../images/hats.png);
+    background-size: auto 60px;
+    width: 100%;
+    height: 60px;
+    opacity: .05;
+}
+
+.other-work-links {
+    @include outer-container;
+    li {
+        @include span-columns(4);
+        text-align: center;
+        padding:em(5px);
+    }
+    a {
+        color: #333;
+        display: block;
+        transition: .2s;
+        &::before {
+            display: block;
+            font-size: 250%;
+            margin-bottom: em(2px);
+            color: $orange;
+            transition: .2s;
+        }
+        &:hover {
+            transition: .2s;
+            color: $dark-blue;
+            &::before {
+                transition: .2s;
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.photog {
+    @include buildIcon("C");
+}
+
+.graphics {
+    @include buildIcon("P");
+}
+
+.video {
+    @include buildIcon("V");
+}
+
+@include media($tablet) {}
+
+
+@include media($desktop) {
+    .other-work-wrapper {
+        @include span-columns(12);
+    }
+    .other-work-links {
+        li {
+            @include span-columns(4);
+            text-align: center;
+            padding: 50px 10px;
+            font-weight: bold;
+        }
+        a {
+            &::before {
+                font-size: 500%;
+            }
+        }
+    }
+}
