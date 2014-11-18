@@ -4,6 +4,7 @@ $gutter: em(15px);
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+$text: #333;
 // $primary: RGBA(255, 210, 93, 1);
 $primary: rgba(241, 147, 42, 1);
 $primaryTrans: rgba(241, 147, 42, .4);
@@ -11,9 +12,8 @@ $secondary: #23417d;
 $secondary: rgba(32, 116, 152, 1);
 $secondaryTrans: rgba(32, 116, 152, .5);
 
-
 $orange: rgba(255, 99, 62, 1);
-$l-yellow: rgba(255, 214, 110, 1);
+$l-yellow: rgba(254, 224, 154, 1);
 $yellow: rgba(255, 200, 62, 1);
 $ll-blue: rgba(147, 215, 245, 1);
 $l-blue: rgba(112, 205, 245, 1);
@@ -26,6 +26,9 @@ $secondaryBG: rgba(248, 195, 135, 1);
 $tablet: new-breakpoint(min-width 600px max-width 1000px);
 $desktop: new-breakpoint(min-width 1000px);
 
+
+$max: 1000px;
+
 @mixin fillParent {
     display: block;
     position: absolute;
@@ -35,10 +38,19 @@ $desktop: new-breakpoint(min-width 1000px);
     left: 0;
 }
 
+@mixin buildIcon($w){
+    &::before{
+        content:'#{$w}';
+        @extend .icon;
+
+    }   
+}
+
 @font-face {
     font-family: icons;
     src: url(../fonts/icons.ttf);
 }
+
 .openSans {
     font-family: 'Open Sans', sans-serif;
 }
@@ -48,23 +60,31 @@ $desktop: new-breakpoint(min-width 1000px);
 }
 
 .icon{
-    font-family: icons, sans-serif;
+    font-family: 'icons', sans-serif;
 }
+
+body,
+ul,
+input,
+textarea,
+button{
+    @extend .openSans;
+}
+
 
 body {
     margin: 0;
     padding: 0;
     font-size: 100%;
-    @extend .openSans;
-    color: #333;
+    color: $text;
 }
 
 a {
-    color: $secondary;
+    color: $orange;
     text-decoration: none;
     transition: .2s;
     &:hover {
-        color: #333;
+        color: $blue;
         transition: .2s;
     }
 }
@@ -90,11 +110,23 @@ ul {
 section {
     $max-width: 100%;
     @include outer-container;
+    h2{
+        text-align: center;
+        font-size:200%;
+    }
 }
 
 .main-wrap{
     $max-width: 1000px;
     @include outer-container
+}
+
+.hidden{
+    height:0;
+    overflow: hidden;
+}
+.showing{
+    height:auto;
 }
 
 

@@ -11,11 +11,14 @@ $('.main-nav').onePageNav({
     easing: 'swing',
     begin: function() {
         //I get fired when the animation is starting
+        console.log("begin");
     },
     end: function() {
+        console.log("end");
         //I get fired when the animation is ending
     },
     scrollChange: function($currentListItem) {
+        console.log("scrollChange");
         //I get fired when you enter a section and I pass the list item of the section
     }
 });
@@ -23,10 +26,19 @@ $('.main-nav').onePageNav({
 
 $('.send-message').submit(function(e){
     e.preventDefault();
-    var msgParams = $(e.target).serializeObject();
+    var msgParams = $(this).serializeObject();
+    var from = "From: "+msgParams.fromName;
+    var fromEmail = "Email: "+msgParams.fromEmail;
+    msgParams.message = '<p>'+from+'</p><p>'+fromEmail+'</p><p>'+msgParams.message+'</p>';
+    console.log(msgParams);
     sendMail(msgParams);
+    $(this).html('<h1>Message sent. Thanks!</h1>');
 });
 
+$('.bio').on('click', function(e){
+    e.preventDefault();
+    $('.bio-text').toggleClass('hidden showing');
+})
 
 $.fn.serializeObject = function() {
     return this.serializeArray().reduce(function(acum, i) {
