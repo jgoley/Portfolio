@@ -6,7 +6,7 @@ header {
     margin: 0 auto;
     z-index: 1000;
     padding: 2em;
-    // border-bottom: 1px solid #ebebeb;
+    border-bottom: 2px solid $blue;
     overflow: hidden;
 }
 
@@ -16,14 +16,19 @@ header {
     transform: translate(0, -50%);
 }
 
+.menu-link {
+    @extend .icon;
+    font-size: 1.7em;
+}
+
 .name {
     font-size: 1.75em;
     width: 100%;
-    text-align: right;
+    text-align: center;
     position: absolute;
-    transform: translate(0, -50%);
-    right: 10px;
+    transform: translate(-50%, -50%);
     top: 50%;
+    left:50%;
     margin: 0;
     text-transform: uppercase;
     color: $orange;
@@ -36,7 +41,7 @@ header {
     @include outer-container;
 }
 
-nav {
+.main-nav {
     display: none;
     $max-width: 1000px;
     @include outer-container;
@@ -50,16 +55,15 @@ nav {
         display: block;
         background: #ebebeb;
         border-bottom: 1px solid #FFF;
-
     }
 }
 
 .current {
     a {
-        background:  $blue;
+        background: $blue;
         transition: .4s;
-        color:#000;
-        text-shadow: 0 1px 0 rgba(255,255,255,.4);
+        color: #000;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     }
 }
 
@@ -74,11 +78,14 @@ nav {
         font-size: 2em;
         transform: translate(0, -50%);
         text-align: right;
+        width: 100%;
+        right:em(10px);
+        left:auto;
     }
     .menu {
         display: none;
     }
-    nav {
+    .main-nav {
         display: block;
         ul {
             display: inline-block;
@@ -93,20 +100,28 @@ nav {
             }
         }
     }
+    .menu-link {
+        display: none;
+    }
 }
 
 
 @include media($desktop) {
+    header{
+        padding: 2em;
+    }
     .name {
         font-size: 2.25em;
         text-align: center;
         left: 0;
+        width: 100%;
         right: 0;
+        transform: translate(0, -50%)
     }
     .menu {
         display: none;
     }
-    nav {
+    .main-nav {
         display: block;
         $max-width: 1000px;
         @include outer-container;
@@ -133,11 +148,14 @@ nav {
             background: none;
             transition: .4s;
             &:hover {
-                background:  $blue;
+                background: $blue;
                 transition: .4s;
-                color:#000;
-                text-shadow: 0 1px 0 rgba(255,255,255,.4);
+                color: #000;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
             }
         }
+    }
+    .menu-link {
+        display: none;
     }
 }

@@ -9,45 +9,48 @@
 
 .contact-info {
     @include span-columns(12);
-    text-align: center;
     padding: 0 em(15px);
 }
 
-.contact {
-    h1 {}
+.contact-methods,
+.social{
+	li{
+        font-size: em(22px);
+        display: block;
+        vertical-align: middle;
+        margin-bottom:em(2px);
+	}
+    a{
+    	&::before{
+    		margin-right:em(5px);
+	        vertical-align: middle;
+	        margin-right: em(5px);
+	        font-size: em(28px);
+    	}
+    }
 }
 
 .social {
     margin-top: em(30px);
     li {
-        display: block;
-        vertical-align: middle;
-        font-size: em(40px);
-        margin-right: em(5px);
         // border-top:1px solid #ebebeb;
     	// border-bottom:1px solid #ebebeb;
     	// padding:em(2px) 0;
     }
-    a{
-    	&::before{
-    		margin-right:em(5px);
-    	}
-    }
+}
+
+.contact-methods{
+	padding:em(10px) 0;
+    border-top:1px solid $blue;
+    border-bottom:1px solid $blue;
 }
 
 .email {
     @include buildIcon('M');
-    // background: $yellow;
-    font-size: 150%;
-    border-top:1px solid #ebebeb;
-    border-bottom:1px solid #ebebeb;
-    padding:em(10px) 0;
-    display: block;
-    &::before{
-        vertical-align: middle;
-        margin-right: em(5px);
-        font-size: em(28px);
-    }
+}
+
+.tel {
+    @include buildIcon('p');
 }
 
 .github {
@@ -75,11 +78,17 @@
         display: block;
         padding: 1em;
         border-radius: 3px;
-        border: 1px solid #CCC;
+        border: 1px solid $blue;
         box-shadow: inset 1px 1px 4px rgba(200, 200, 200, 0.3);
         font-size: 1em;
         outline: 0;
         min-height: 2.75em;
+    	transition:.2s;
+        &:focus{
+        	outline:0;
+        	border: 1px solid $orange;
+	    	transition:.2s;
+        }
     }
     textarea {
         width: 100%;
@@ -93,9 +102,16 @@
         color: #FFF;
         padding: .5em 1.5em;
         width: 100%;
+    	transition:.2s;
+        &:hover{
+        	background: $blue;
+        	transition:.2s;
+        }
     }
     label {
         font-weight: bold;
+        margin-bottom:em(3px);
+        display: block;
     }
 }
 

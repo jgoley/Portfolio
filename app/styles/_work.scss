@@ -1,12 +1,12 @@
 .work-wrap {
-    padding:em(75px) 0;
+    padding: em(75px) 0;
 }
 
 .work {
-    margin-bottom:em(30px);
+    margin-bottom: em(30px);
     > div {
         @include span-columns(11);
-        @include shift(.5);
+        @include shift(0.5);
         position: relative;
         height: 350px;
         margin-bottom: em(30px);
@@ -17,12 +17,27 @@
             content: "";
             background: rgba(240, 240, 240, 0.7);
         }
+        &:hover {
+            .details {
+                height: 100%;
+                p {
+                    display: block;
+                }
+                background: $dark-blue-Trans-2;
+                color: #FFF;
+                h3 {
+                    color: $text;
+                    background:$l-yellow;
+                    padding-bottom:em(5px)
+                }
+            }
+        }
         border-radius: .3em;
     }
     .details {
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.65);
+        background: $dark-blue-Trans-1;
         width: 100%;
         transition: .2s;
         height: 28%;
@@ -55,8 +70,8 @@
         transition: .2s;
         padding: 15px;
         background: rgba(230, 230, 230, 0.95);
-        text-shadow: 0 1px 0 rgba(255,255,255,.6);
-        color:$text;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        color: $text;
         &.site {
             left: 0;
             border-right: 1px solid rgba(100, 100, 100, 0.5);
@@ -68,73 +83,72 @@
         &:hover {
             background: rgba(200, 200, 200, 0.95);
             transition: .2s;
-            text-shadow: 0 1px 0 rgba(0,0,0,.4);
-            color:#FFF;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            color: #FFF;
         }
     }
-    .span-width{
-        width:100%;
-        border:0 !important;
+    .span-width {
+        width: 100%;
+        border: 0 !important;
     }
-    ul{
-        padding:em(15px);
-        li{
+    ul {
+        padding: em(15px);
+        li {
             display: inline-block;
             font-size: .75em;
         }
     }
 }
 
-
 // Work
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.work-example{
+.work-example {
     background-size: cover;
 }
 
-@mixin work($w){
+@mixin work($w) {
     @extend .work-example;
     background: url(../images/work/#{$w}.jpg) top center;
 }
 
-.pollinate{
-    @include work('pollinate');
+.pollinate {
+    @include work("pollinate");
 }
 
 .tap {
-    @include work('tap');
+    @include work("tap");
 }
 
 .chat-app {
-    @include work('chat-app');
+    @include work("chat-app");
 }
 
 .be-curator {
-    @include work('be-curator');
+    @include work("be-curator");
 }
 
 .game {
-    @include work('game');
+    @include work("game");
 }
 
 .photo-share {
-    @include work('photo-share');
+    @include work("photo-share");
 }
 
 // Media Queries
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @include media($tablet) {
-
     .work {
         > div {
             @include span-columns(5.5);
             @include omega(2n);
-            @include shift(.35);
+            @include shift(0.35);
         }
     }
 }
+
 
 @include media($desktop) {
     .work {
@@ -142,19 +156,6 @@
             @include span-columns(4);
             @include omega(3n);
             @include shift(0);
-            &:hover {
-                .details {
-                    height: 100%;
-                    p {
-                        display: block;
-                    }
-                    background: rgba(0, 0, 0, 0.8);
-                    color: #CCC;
-                    h3 {
-                        color: $primary;
-                    }
-                }
-            }
         }
     }
 }

@@ -1,3 +1,5 @@
+console.log("Hey, How's it going?  Need a developer? jgoley@gmail.com or @jgoley");
+
 (function(){
     Parse.initialize("NXnx3AGGgXuHTuhH9b9CH8FtnpZ1rw2Nb5NZ2tEc", "egrsd4QPqFZas2YDxzlVvXg36LErxeVSumMv8kRx");
 })();
@@ -11,18 +13,18 @@ $('.main-nav').onePageNav({
     easing: 'swing',
     begin: function() {
         //I get fired when the animation is starting
-        console.log("begin");
     },
     end: function() {
-        console.log("end");
         //I get fired when the animation is ending
     },
     scrollChange: function($currentListItem) {
-        console.log("scrollChange");
         //I get fired when you enter a section and I pass the list item of the section
     }
 });
 
+$(function(){
+    // $.slidebars();
+});
 
 $('.send-message').submit(function(e){
     e.preventDefault();

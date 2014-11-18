@@ -19,6 +19,8 @@ $ll-blue: rgba(147, 215, 245, 1);
 $l-blue: rgba(112, 205, 245, 1);
 $blue: rgba(65, 184, 235, 1);
 $dark-blue: rgba(21, 113, 153, 1);
+$dark-blue-Trans-1: rgba(21, 113, 153, .7);
+$dark-blue-Trans-2: rgba(21, 113, 153, .85);
 
 $blueTrans: rgba(65, 184, 235, .9);
 
@@ -139,3 +141,4 @@ section {
 @import "contact";
 @import "blog";
 @import "footer";
+@import "../bower_components/Slidebars/distribution/0.9.4/slidebars"
