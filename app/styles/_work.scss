@@ -23,8 +23,8 @@
                 p {
                     display: block;
                 }
-                background: $dark-blue-Trans-2;
-                color: #FFF;
+                background: $blue-trans-2;
+                color: $text;
                 h3 {
                     color: $text;
                     background:$l-yellow;
@@ -37,7 +37,7 @@
     .details {
         position: absolute;
         bottom: 0;
-        background: $dark-blue-Trans-1;
+        background: $blue-trans-1;
         width: 100%;
         transition: .2s;
         height: 28%;
@@ -96,6 +96,17 @@
         li {
             display: inline-block;
             font-size: .75em;
+            &::after{
+                content:"|";
+                color:$dark-blue;
+                margin: 0 em(5px) 0 em(10px);
+            }
+
+            &:last-child{
+                &::after{
+                    content:"";
+                }
+            }
         }
     }
 }
