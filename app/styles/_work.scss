@@ -15,7 +15,7 @@
         &::before {
             @include fillParent;
             content: "";
-            background: rgba(240, 240, 240, 0.7);
+            background: rgba(240, 240, 240, 0.8);
         }
         &:hover {
             .details {
@@ -23,13 +23,16 @@
                 p {
                     display: block;
                 }
-                background: $blue-trans-2;
+                background: rgba(240, 240, 240, 0.9);
                 color: $text;
                 h3 {
                     color: $text;
                     background:$l-yellow;
-                    padding-bottom:em(5px)
+                    padding-bottom:em(5px);
+                    text-shadow: 0 1px 0 rgba(255,255,255,.5);
                 }
+            }
+            a{
             }
         }
         border-radius: .3em;
@@ -40,8 +43,9 @@
         background: $blue-trans-1;
         width: 100%;
         transition: .2s;
-        height: 28%;
+        height: 26%;
         z-index: 100;
+        text-shadow: 0 1px 0 rgba(255,255,255,.2);
     }
     .links {
         position: absolute;
@@ -55,6 +59,7 @@
         margin: 0;
         padding: .5em 0 0 .5em;
         color: #FFF;
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
     }
     p {
         padding: em(10px) em(15px);
@@ -68,23 +73,22 @@
         text-align: center;
         bottom: 0;
         transition: .2s;
-        padding: 15px;
-        background: rgba(230, 230, 230, 0.95);
+        padding: 12px;
+        background: rgba(230,230,230,.95);
         text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        border-top: #CCC 1px solid;
         color: $text;
         &.site {
             left: 0;
-            border-right: 1px solid rgba(100, 100, 100, 0.5);
+            border-right: 1px solid #CCC;
         }
         &.code {
             border-left: 1px solid rgba(250, 250, 250, 0.5);
             right: 0;
         }
         &:hover {
-            background: rgba(200, 200, 200, 0.95);
+            background: $l-yellow;//$yellow;
             transition: .2s;
-            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            color: #FFF;
         }
     }
     .span-width {

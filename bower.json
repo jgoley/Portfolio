@@ -6,7 +6,8 @@
     "neat": "~1.7.0",
     "jquery.scrollTo": "~1.4.13",
     "bigSlide": "~0.5.1",
-    "Slidebars": "~0.10.2"
+    "Slidebars": "~0.10.2",
+    "fancybox": "~2.1.5"
   },
   "devDependencies": {}
 }

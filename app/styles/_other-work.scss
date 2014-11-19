@@ -7,6 +7,7 @@
 
 .other-work-wrapper {
     @include outer-container;
+    float: none !important;
 }
 
 .hats {
@@ -22,7 +23,7 @@
     li {
         @include span-columns(4);
         text-align: center;
-        padding:em(5px);
+        padding: em(5px);
     }
     a {
         color: #333;
@@ -46,22 +47,67 @@
     }
 }
 
-.photog {
+.more-work {
+    display: none;
+}
+
+#photos-container,
+#videos-container,
+#graphics-container {
+    @include outer-container;
+    background: #000;
+    padding: em(30px) 0;
+}
+
+.photos,
+.videos,
+.graphics {
+    $max-width: 1000px;
+    @include outer-container;
+}
+
+.item {
+    @include span-columns(12);
+    padding: 25px 10px;
+    a {
+        height: 250px;
+        display: block;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+iframe{
+    width:100%;
+    margin-bottom:em(20px);
+}
+
+.photogs-link {
     @include buildIcon("C");
 }
 
-.graphics {
+.graphics-link {
     @include buildIcon("P");
 }
 
-.video {
+.videos-link {
     @include buildIcon("V");
 }
 
-@include media($tablet) {}
+@include media($tablet) {
+
+    .item {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
 
 
 @include media($desktop) {
+    iframe {
+        width: 48%;
+        margin: 1%;
+    }
     .other-work-wrapper {
         @include span-columns(12);
     }
@@ -77,5 +123,9 @@
                 font-size: 500%;
             }
         }
+    }
+    .item {
+        @include span-columns(4);
+        @include omega(3n);
     }
 }

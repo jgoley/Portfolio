@@ -22,8 +22,8 @@ $yellow: rgba(255, 200, 62, 1);
 $ll-blue: rgba(147, 215, 245, 1);
 $l-blue: rgba(112, 205, 245, 1);
 $blue: rgba(65, 184, 235, 1);
-$blue-trans-1: rgba(65, 184, 235, .6);
-$blue-trans-2: rgba(65, 184, 235, .85);
+$blue-trans-1: rgba(65, 184, 235, .8);
+$blue-trans-2: rgba(65, 184, 235, .9);
 
 $dark-blue: rgba(21, 113, 153, 1);
 $dark-blue-trans-1: rgba(21, 113, 153, .7);
@@ -129,7 +129,7 @@ section {
 
 .main-wrap{
     $max-width: 1000px;
-    @include outer-container
+    @include outer-container;
 }
 
 .hidden{
@@ -137,7 +137,7 @@ section {
     overflow: hidden;
 }
 .showing{
-    height:auto;
+    display: block !important;
 }
 
 
@@ -148,4 +148,4 @@ section {
 @import "contact";
 @import "blog";
 @import "footer";
-@import "../bower_components/Slidebars/distribution/0.9.4/slidebars"
+@import "fancybox";

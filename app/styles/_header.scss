@@ -56,14 +56,13 @@ header {
         background: #ebebeb;
         border-bottom: 1px solid #FFF;
     }
-}
-
-.current {
-    a {
-        background: $blue;
-        transition: .4s;
-        color: #000;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    .current {
+        a {
+            background: $blue;
+            transition: .4s;
+            color: #000;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
     }
 }
 

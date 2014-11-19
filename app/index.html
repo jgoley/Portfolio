@@ -12,7 +12,7 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
         </head>
         <body>
-            <div id="sb-site" class="main-container">
+            <div class="main-container">
                 
                 <header>
                     <h1 class="name">Jonathan Goley</h1>
@@ -172,63 +172,73 @@
                             <h2>Wearer of Many Hats...</h2>
                             <div class="other-work-wrapper">
                                 <ul class="other-work-links">
-                                    <li><a href="#" class="photog">Photography</a></li>
-                                    <li><a href="https://vimeo.com/user6539324/videos" class="video">Video Production</a></li>
-                                    <li><a href="#" class="graphics">Graphics</a></li>
+                                    <li><a href="#" class="photogs-link">Photography</a></li>
+                                    <li><a href="https://vimeo.com/user6539324/videos" class="videos-link">Video Production</a></li>
+                                    <li><a href="#" class="graphics-link">Graphics</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="hats"></div>
-                    </div>
-                    
-                </section>
-                <section id="contact" class="contact">
-                    <div class="main-wrap">
-                        <div class="contact-info">
-                            <h1>Get in touch &amp; Connect</h1>
-                            <ul class="contact-methods">
-                                <li><a href="mailto:jgoley@gmail.com" class="email">jgoley@gmail.com</a></li>
-                                <li><a href="tel:1-803-767-3375" class="tel">(803)-767-3375</a></li>
-                            </ul>
-                            <ul class="social">
-                                <li><a href="http://twitter.com/jgoley" class="twitter">Twitter</a></li>
-                                <li><a href="http://github.com/jgoley" class="github">Github</a></li>
-                                <li><a href="https://www.linkedin.com/pub/jonathan-goley/76/543/41" class="linked">LinkedIn</a></li>
-                            </ul>
+                        <div>
+                            <div id="videos-container" class="more-work">
+                                <div class="videos">
+                                    
+                                </div>
+                            </div>
+                            <div id="graphics-container" class="more-work">
+                                <ul class="graphics">
+                                    
+                                </ul>
+                            </div>
+                            <div id="photos-container" class="more-work">
+                                <ul class="photos">
+                                    
+                                </ul>
+                            </div>
                         </div>
-                        <form class="send-message">
-                            <label for="fromName">Name:</label>
-                            <input type="text" name="fromName" placeholder="Your Name">
-                            <label for="fromEmail">Email address:</label>
-                            <input type="email" name="fromEmail" placeholder="email@domain.com">
-                            <textarea name="message" placeholder="Your message"></textarea>
-                            <input type="submit" value="Send Message">
-                        </form>
                     </div>
-                </section>
-                
-                <footer>
-                </footer>
-                <nav class="sb-slidebar sb-left">
-                    <ul>
-                        <li><a href="#about" class="current">About</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#contact">Connect</a></li>
-                        <li><a href="http://blog.jonathangoley.com">Blog</a></li>
+        </section>
+        <section id="contact" class="contact">
+            <div class="main-wrap">
+                <div class="contact-info">
+                    <h1>Get in touch &amp; Connect</h1>
+                    <ul class="contact-methods">
+                        <li><a href="mailto:jgoley@gmail.com" class="email">jgoley@gmail.com</a></li>
+                        <li><a href="tel:1-803-767-3375" class="tel">(803)-767-3375</a></li>
                     </ul>
-                </nav>
+                    <ul class="social">
+                        <li><a href="http://twitter.com/jgoley" class="twitter">Twitter</a></li>
+                        <li><a href="http://github.com/jgoley" class="github">Github</a></li>
+                        <li><a href="https://www.linkedin.com/pub/jonathan-goley/76/543/41" class="linked">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <form class="send-message">
+                    <label for="fromName">Name:</label>
+                    <input type="text" name="fromName" placeholder="Your Name">
+                    <label for="fromEmail">Email address:</label>
+                    <input type="email" name="fromEmail" placeholder="email@domain.com">
+                    <textarea name="message" placeholder="Your message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
             </div>
-            <!-- build:js scripts/vendor.js -->
-            <!-- bower:js -->
-            <script src="bower_components/jquery/dist/jquery.js"></script>
-            <script src="js/parse.js"></script>
-            <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
-            <script src="bower_components/Slidebars/distribution/0.9.4/slidebars.js"></script>
-            <script src="js/nav.js"></script>
-            <!-- endbower -->
-            <!-- endbuild -->
-            <!-- build:js scripts/main.js -->
-            <script src="js/main.js"></script>
-            <!-- endbuild -->
-        </body>
-    </html>
+        </section>
+        
+        <footer>
+        </footer>
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+    <script src="js/parse.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="js/fn.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/other-work.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
