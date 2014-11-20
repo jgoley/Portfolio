@@ -4,7 +4,7 @@ $(function() {
     	photoHTML = ""
         videosHTML = "",
         graphicsHTML = "",
-        videos = ['87533088', '67005081', '76580368', '87533083'];
+        videos = ['67005081', '87533088', '67007547', '87533083', '76580368'];
 
     for (var i = 0; i < videos.length; i++) {
         videosHTML += "<iframe src='//player.vimeo.com/video/"+videos[i]+"' width='500' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
