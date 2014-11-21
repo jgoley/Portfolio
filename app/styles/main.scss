@@ -135,9 +135,11 @@ section {
 .hidden{
     height:0;
     overflow: hidden;
+    visibility: hidden;
 }
 .showing{
     display: block !important;
+    visibility: visible;
 }
 
 

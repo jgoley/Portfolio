@@ -82,15 +82,23 @@
     @include span-columns(11);
     @include shift(.5);
     margin-bottom: em(20px);
-	h2{
+    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+	padding-bottom:em(20px);
+    h2{
 		text-align: left;
+        margin-top:0;
 		span{
 			font-size: 60%;
 		}
 	}
+
 }
 
-
+.left-image{
+    float: left;
+    height: 250px;
+    padding: 0 10px 10px 0;
+}
 
 .like {
     margin: em(50px);
@@ -171,5 +179,10 @@
         @include outer-container;
         @include span-columns(6);
         @include shift(3);
+    }
+    .left-image{
+        margin-left: -6.875em;
+        padding:em(10px) em(20px) em(10px) em(0);
+        height: 300px;
     }
 }
