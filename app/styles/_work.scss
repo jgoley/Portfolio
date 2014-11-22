@@ -15,7 +15,7 @@
         &::before {
             @include fillParent;
             content: "";
-            background: rgba(240, 240, 240, 0.8);
+            background: rgba(240, 240, 240, 0.4);
         }
         &:hover {
             .details {
