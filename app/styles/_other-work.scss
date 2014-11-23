@@ -21,7 +21,7 @@
 .other-work-links {
     @include outer-container;
     li {
-        @include span-columns(4);
+        @include span-columns(12);
         text-align: center;
         padding: em(5px);
         cursor:pointer;
