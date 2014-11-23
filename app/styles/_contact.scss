@@ -1,0 +1,161 @@
+.contact {
+    padding: em(50px) 0;
+    h1 {
+        font-size: 3em;
+        margin: 0 0 em(10px) 0;
+        line-height: 1.13em;
+    }
+}
+
+.contact-info {
+    @include span-columns(12);
+    padding: 0 em(15px);
+    h1 {
+        text-align: center;
+    }
+}
+
+.contact-methods,
+.social {
+    text-align: center;
+    li {
+        font-size: em(22px);
+        display: block;
+        vertical-align: middle;
+        margin-bottom: em(2px);
+        font-size: em(30px);
+    }
+    a {
+        &::before {
+            margin-right: em(5px);
+            vertical-align: middle;
+            margin-right: em(5px);
+            font-size: em(28px);
+        }
+    }
+}
+
+.social {
+    margin-top: em(30px);
+    li {
+        display: inline-block;
+        font-size: em(30px);
+        span {
+            display: none;
+        }
+    }
+}
+
+.contact-methods {
+    padding: em(10px) 0;
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    text-align: center;
+}
+
+.email {
+    @include buildIcon("M");
+}
+
+.tel {
+    @include buildIcon("p");
+}
+
+.github {
+    @include buildIcon("G");
+}
+
+.twitter {
+    @include buildIcon("T");
+}
+
+.linked {
+    @include buildIcon("L");
+}
+
+.send-message {
+    @include span-columns(12);
+    padding: 0 em(15px);
+    margin-top: 30px;
+    input, textarea {
+        width: 100%;
+        display: block;
+        min-height: em(40px);
+        padding: em(5px);
+        margin-bottom: em(20px);
+        display: block;
+        padding: 1em;
+        border-radius: 3px;
+        border: 1px solid $blue;
+        box-shadow: inset 1px 1px 4px rgba(200, 200, 200, 0.3);
+        font-size: 1em;
+        outline: 0;
+        min-height: 2.75em;
+        transition: .2s;
+        &:focus {
+            outline: 0;
+            border: 1px solid $orange;
+            transition: .2s;
+        }
+    }
+    textarea {
+        width: 100%;
+        min-height: em(200px);
+    }
+    input[type=submit] {
+        cursor: pointer;
+        background: $orange;
+        border: 0;
+        font-size: 1.2em;
+        color: #FFF;
+        padding: .5em 1.5em;
+        width: 100%;
+        transition: .2s;
+        &:hover {
+            background: $blue;
+            transition: .2s;
+        }
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: em(3px);
+        display: block;
+    }
+}
+
+// Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@include media($tablet) {}
+
+
+@include media($desktop) {
+    .contact-info {
+        text-align: left;
+        @include span-columns(5);
+        h1 {
+            text-align: left;
+        }
+    }
+    .send-message {
+        @include span-columns(7);
+        input, input[type=submit] {
+            width: 55%;
+        }
+    }
+    .contact-methods,
+    .social {
+        li {
+            font-size: em(20px);
+            text-align: left;
+            span {
+                display: inline-block;
+            }
+        }
+    }
+    .social{
+        li{
+            display: block;
+        }
+    }
+}

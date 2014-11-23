@@ -1,0 +1,6 @@
+.blog{
+	$max-width: 100%;
+	@include outer-container;
+	background:$blue;
+
+}

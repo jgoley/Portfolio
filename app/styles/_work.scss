@@ -1,0 +1,176 @@
+.work-wrap {
+    padding: em(75px) 0;
+}
+
+.work {
+    margin-bottom: em(30px);
+    > div {
+        @include span-columns(11);
+        @include shift(0.5);
+        position: relative;
+        height: 350px;
+        margin-bottom: em(30px);
+        overflow: hidden;
+        background-size: cover;
+        &::before {
+            @include fillParent;
+            content: "";
+            background: rgba(240, 240, 240, 0.4);
+        }
+        &:hover {
+            .details {
+                height: 100%;
+                p {
+                    display: block;
+                }
+                background: rgba(240, 240, 240, 0.9);
+                color: $text;
+                h3 {
+                    color: $text;
+                    background:$l-yellow;
+                    padding-bottom:em(5px);
+                    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+                }
+            }
+            a{
+            }
+        }
+        border-radius: .3em;
+    }
+    .details {
+        position: absolute;
+        bottom: 0;
+        background: $blue-trans-1;
+        width: 100%;
+        transition: .2s;
+        height: 26%;
+        z-index: 100;
+        text-shadow: 0 1px 0 rgba(255,255,255,.2);
+    }
+    .links {
+        position: absolute;
+        bottom: 0;
+        z-index: 200;
+        width: 100%;
+        background: #FFF;
+    }
+    h3 {
+        text-transform: uppercase;
+        margin: 0;
+        padding: .5em 0 0 .5em;
+        color: #FFF;
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    }
+    p {
+        padding: em(10px) em(15px);
+        margin: 0;
+        font-size: .9em;
+        font-weight: 200;
+    }
+    a {
+        width: 50%;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        transition: .2s;
+        padding: 12px;
+        background: rgba(230,230,230,.95);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        border-top: #CCC 1px solid;
+        color: $text;
+        &.site {
+            left: 0;
+            border-right: 1px solid #CCC;
+        }
+        &.code {
+            border-left: 1px solid rgba(250, 250, 250, 0.5);
+            right: 0;
+        }
+        &:hover {
+            background: $l-yellow;//$yellow;
+            transition: .2s;
+        }
+    }
+    .span-width {
+        width: 100%;
+        border: 0 !important;
+    }
+    ul {
+        padding: em(15px);
+        li {
+            display: inline-block;
+            font-size: .75em;
+            &::after{
+                content:"|";
+                color:$dark-blue;
+                margin: 0 em(5px) 0 em(10px);
+            }
+
+            &:last-child{
+                &::after{
+                    content:"";
+                }
+            }
+        }
+    }
+}
+
+// Work
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.work-example {
+    background-size: cover;
+}
+
+@mixin work($w) {
+    @extend .work-example;
+    background: url(../images/work/#{$w}.jpg) top center;
+}
+
+.pollinate {
+    @include work("pollinate");
+}
+
+.tap {
+    @include work("tap");
+}
+
+.chat-app {
+    @include work("chat-app");
+}
+
+.be-curator {
+    @include work("be-curator");
+}
+
+.game {
+    @include work("game");
+}
+
+.photo-share {
+    @include work("photo-share");
+}
+
+// Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@include media($tablet) {
+    .work {
+        > div {
+            @include span-columns(5.5);
+            @include omega(2n);
+            @include shift(0.35);
+        }
+    }
+}
+
+
+@include media($desktop) {
+    .work {
+        > div {
+            @include span-columns(4);
+            @include omega(3n);
+            @include shift(0);
+        }
+    }
+}
