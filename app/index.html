@@ -224,6 +224,20 @@
                         </div>
                     </div>
         </section>
+
+        <section id="blog" class="blog">
+            <div class="main-wrap blog-warp">
+                <div class="blog-left">
+                    <h1>Blog</h1>
+                    <div class="blog-posts-shortList">
+                </div>
+                    <a href="http://blog.jonathangoley.com" class="more">View more posts</a>
+                </div>
+                <div class="blog-posts-wrap">
+                </div>
+            </div>            
+        </section>
+        
         <section id="contact" class="contact">
             <div class="main-wrap">
                 <div class="contact-info">
@@ -249,25 +263,18 @@
             </div>
         </section>
 
-        <section id="blog" class="blog">
-            <div class="main-wrap blog-warp">
-                <div class="blog-left">
-                    <h1>Blog</h1>
-                    <a href="http://blog.jonathangoley.com" class="more">View more posts</a>
-                </div>
-                <div class="blog-posts-wrap">
-                    <script id="blog-post-template" type="text/template">
-                        <h2><%=title %></h2>
-                        <p><%=content %></p>
-                        <a href="<%=link %>" class="more">Read More</a>
-                    </script>
-                </div>
-            </div>            
-        </section>
 
         <footer>
         </footer>
     </div>
+    <script id="blog-post-template" type="text/template">
+        <h2><%=title %></h2>
+        <p><a href="<%=link %>" class="more read-more">Read More</a><%=contentSnippet %></p>
+        
+    </script>
+    <script id="blog-postList-template" type="text/template">
+        <a href="<%=link %>"><%=title %></a>
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>

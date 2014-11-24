@@ -1,25 +1,89 @@
-.blog{
-	$max-width: 100%;
-	@include outer-container;
-	background:$blue;
-
-	.more{
-		padding:10px 20px;
-		background: $ll-blue;
-		border-radius:4px;
-	}
-	h2{
-		text-align: left;
-	}
-	img{
-		max-width: 100%;
-	}
+.blog {
+    padding: em(80px) 0;
+    $max-width: 100%;
+    @include outer-container;
+    background: $blue;
+    .more {
+        padding: 10px 20px;
+        background: $ll-blue;
+        border-radius: 4px;
+        display: block;
+        font-weight: 400;
+        &:hover {
+            color: $text;
+        }
+    }
+    h1 {
+        margin: 0 0 em(5px) 0;
+    }
+    h2 {
+        text-align: left;
+        margin-bottom: em(0px);
+        color: $l-yellow;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    }
+    img {
+        max-width: 100%;
+    }
 }
 
-.blog-left{
-	@include span-columns(4)
+.blog-warp {
+    $max-width: 800px;
 }
 
-.blog-posts-wrap{
-	@include span-columns(8);
+.read-more {
+    float: right;
+    margin-left: em(10px);
+}
+
+.blog-left {
+    @include span-columns(12);
+    padding:0 5%;
+}
+
+.blog-posts-wrap {
+    @include span-columns(12);
+    padding: 0 5% ;
+    margin-top: em(15px);
+}
+
+.blog-posts-shortList {
+	display: none;
+    margin-bottom: em(20px);
+    li {
+        border-bottom: solid $ll-blue 1px;
+    }
+    a {
+        color: #FFF;
+        font-size: 1.1em;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+        display: block;
+        padding: em(5px);
+        &:hover {
+            background: $ll-blue;
+            color: $text;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+// Media Queries
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@include media($tablet) {}
+
+
+@include media($desktop) {
+ 
+.blog-posts-shortList {
+	display: block;
+}
+	   .blog-left {
+        @include span-columns(4);
+    }
+    .blog-posts-wrap {
+        @include span-columns(7.25);
+        @include shift(0.5);
+        margin-top: em(15px);
+    }
 }
