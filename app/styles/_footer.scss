@@ -2,4 +2,19 @@
 footer {
     padding:em(50px);
     background:$blue;
+    text-align: center;
+        	&:before{
+    		content:'';
+    		display: inline-block;
+    		vertical-align: middle;
+    		background-image: url(../images/logo.png);
+    		background-size: cover;
+    		background-position: center center;
+    		height:50px;
+    		width:50px;
+    		margin-right:em(5px);
+    	}
+    h1{	
+    	font-size: 1em;
+    }
 }
