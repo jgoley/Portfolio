@@ -6,17 +6,13 @@
         url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=2&q=http://blog.jonathangoley.com/feed',
         type: 'GET',
         dataType: 'jsonp'
-    })
-        .done(function(data) {
-            var posts = new Parse.Collection(data.responseData.feed.entries);
-
-            new JGo.Blog({
-                $container: $('.blog-posts-wrap'),
-                collection: posts
-            });
-
+    }).done(function(data) {
+        var posts = new Parse.Collection(data.responseData.feed.entries);
+        new JGo.Blog({
+            $container: $('.blog-posts-wrap'),
+            collection: posts
         });
-
+    });
 
     JGo.Blog = Parse.View.extend({
         tagName: 'ul',
@@ -55,6 +51,7 @@
         },
 
         render: function() {
+            console.log(this.model.toJSON());
             this.$el.append(this.template(this.model.toJSON()))
         }
     });

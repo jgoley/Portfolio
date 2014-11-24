@@ -3,4 +3,23 @@
 	@include outer-container;
 	background:$blue;
 
+	.more{
+		padding:10px 20px;
+		background: $ll-blue;
+		border-radius:4px;
+	}
+	h2{
+		text-align: left;
+	}
+	img{
+		max-width: 100%;
+	}
+}
+
+.blog-left{
+	@include span-columns(4)
+}
+
+.blog-posts-wrap{
+	@include span-columns(8);
 }

@@ -121,6 +121,10 @@ ul {
 section {
     $max-width: 100%;
     @include outer-container;
+    h1{
+        font-size: 3em;
+        line-height: 1.13em;
+    }
     h2{
         text-align: center;
         font-size:200%;
