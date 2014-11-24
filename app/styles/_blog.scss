@@ -38,17 +38,17 @@
 
 .blog-left {
     @include span-columns(12);
-    padding:0 5%;
+    padding: 0 5%;
 }
 
 .blog-posts-wrap {
     @include span-columns(12);
-    padding: 0 5% ;
+    padding: 0 5%;
     margin-top: em(15px);
 }
 
 .blog-posts-shortList {
-	display: none;
+    display: none;
     margin-bottom: em(20px);
     li {
         border-bottom: solid $ll-blue 1px;
@@ -74,16 +74,17 @@
 
 
 @include media($desktop) {
- 
-.blog-posts-shortList {
-	display: block;
-}
-	   .blog-left {
+    .blog-posts-shortList {
+        display: block;
+    }
+    .blog-left {
         @include span-columns(4);
+        padding: 0;
     }
     .blog-posts-wrap {
         @include span-columns(7.25);
         @include shift(0.5);
         margin-top: em(15px);
+        padding: 0;
     }
 }
