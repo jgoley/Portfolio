@@ -32,7 +32,7 @@ header {
     margin: 0;
     text-transform: uppercase;
     color: $orange;
-    text-shadow: 0 1px 0 rgba(250, 250, 250, 0.5);
+    @extend .light-shadow;
     letter-spacing: .05em;
 }
 
@@ -61,7 +61,7 @@ header {
             background: $blue;
             transition: .4s;
             color: #000;
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+            @extend .light-shadow;
         }
     }
 }
@@ -150,7 +150,7 @@ header {
                 background: $blue;
                 transition: .4s;
                 color: #000;
-                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
             }
         }
     }
