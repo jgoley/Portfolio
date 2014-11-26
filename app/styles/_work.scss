@@ -151,6 +151,10 @@
     @include work("photo-share");
 }
 
+.cma{
+    @include work("cma");
+}
+
 // Media Queries
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
