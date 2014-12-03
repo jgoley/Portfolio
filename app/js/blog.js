@@ -59,7 +59,6 @@
                 showSnippet: opts.showSnippet
             });
             options.$container.append(this.el);
-            console.log(options.showSnippet);
             if(options.showSnippet){
                 this.template = _.template($('#blog-post-template').html());
             } else {
