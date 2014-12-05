@@ -272,12 +272,12 @@
     </div>
     <script id="blog-post-template" type="text/template">
         <h2><%=title %></h2>
-        <p class="date"><%=moment(publishedDate).fromNow() %></p>
+        <p class="date"><%=moment(new Date(publishedDate)).fromNow() %></p>
         <p class="snippet"><a href="<%=link %>" class="more read-more">Read More</a><%=contentSnippet %></p>
         
     </script>
     <script id="blog-postList-template" type="text/template">
-        <a href="<%=link %>"><%=title %> <span><%=moment(publishedDate).fromNow() %></span></a>
+        <a href="<%=link %>"><%=title %> <span><%=moment(new Date(publishedDate)).fromNow() %></span></a>
 
     </script>
     <!-- build:js scripts/vendor.js -->
