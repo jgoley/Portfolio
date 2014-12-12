@@ -36,11 +36,6 @@ header {
     letter-spacing: .05em;
 }
 
-.main-container {
-    $max-width: 100%;
-    @include outer-container;
-}
-
 .main-nav {
     display: none;
     $max-width: 1000px;

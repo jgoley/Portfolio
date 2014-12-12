@@ -1,6 +1,7 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
 $gutter: em(15px);
+$max-width: 100%; 
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
@@ -34,8 +35,8 @@ $blue-trans: rgba(65, 184, 235, .9);
 $primaryBG: rgba(65, 184, 235, 1);
 $secondaryBG: rgba(248, 195, 135, 1);
 
-$tablet: new-breakpoint(min-width 600px max-width 1000px);
-$desktop: new-breakpoint(min-width 1000px);
+$tablet: min-width 600px max-width 1000px;
+$desktop: min-width 1000px;
 
 
 $max: 1000px;
@@ -128,8 +129,7 @@ ul {
 }
 
 section {
-    $max-width: 100%;
-    @include outer-container;
+    @include outer-container(100%);
     h1{
         font-size: 3em;
     }
@@ -139,9 +139,12 @@ section {
     }
 }
 
-.main-wrap{
-    $max-width: 1000px;
+.main-container {
     @include outer-container;
+}
+
+.main-wrap{
+    @include outer-container(1000px);
 }
 
 .hidden{

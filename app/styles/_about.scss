@@ -158,7 +158,7 @@
     .skills {
         li {
             @include span-columns(3, block-collapse);
-            @include omega(0);
+            @include omega();
             text-align: center;
             border-bottom: 0;
             border-right: 1px solid #FFF;
