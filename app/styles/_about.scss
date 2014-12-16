@@ -9,7 +9,7 @@
     text-align: center;
     margin-bottom: em(30px);
     font-size: 200%;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    @extend .dark-shadow;
     color: #FFF;
     padding: 0 20px;
     letter-spacing:.02em;
@@ -30,7 +30,7 @@
 .skills {
     $max-width: $max;
     @include outer-container;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    @extend .light-shadow;
     li {
         @include span-columns(6);
         @include omega;
@@ -62,6 +62,9 @@
             display: block;
             font-size: 300%;
         }
+        &:hover{
+            text-shadow: 0 1px 0 rgba(0,0,0,.4);
+        }
     }
 }
 
@@ -82,7 +85,7 @@
     @include span-columns(11);
     @include shift(.5);
     margin-bottom: em(20px);
-    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+    @extend .light-shadow;
 	padding-bottom:em(20px);
     h2{
 		text-align: left;
@@ -109,7 +112,7 @@
     display: block;
     font-size: 150%;
     text-transform: uppercase;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    @extend .light-shadow;
     color: #333;
 }
 
@@ -117,7 +120,7 @@
 .artist {
     // color: #FFF;
     color: $l-yellow;
-    text-shadow: 0 1px 0 rgba(0,0,0,.3);	
+    @extend .dark-shadow;
     // span {
     //     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     //     color: $l-yellow;
@@ -155,7 +158,7 @@
     .skills {
         li {
             @include span-columns(3, block-collapse);
-            @include omega(0);
+            @include omega();
             text-align: center;
             border-bottom: 0;
             border-right: 1px solid #FFF;

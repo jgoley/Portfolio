@@ -19,12 +19,5 @@ $.fn.serializeObject = function() {
 };
 
 function sendMail(params) {
-    Parse.Cloud.run('sendEmail', params, {
-        success: function(result) {
-            console.log(result)
-        },
-        error: function(error) {
-            console.log(error);
-        }
-    });
+    Parse.Cloud.run('sendEmail', params);
 }

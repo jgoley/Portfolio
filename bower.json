@@ -8,7 +8,8 @@
     "bigSlide": "~0.5.1",
     "Slidebars": "~0.10.2",
     "fancybox": "~2.1.5",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "moment": "~2.8.4"
   },
   "devDependencies": {}
 }

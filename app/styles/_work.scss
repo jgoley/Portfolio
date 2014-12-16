@@ -1,5 +1,5 @@
 .work-wrap {
-    padding: em(75px) 0;
+    padding: em(75px) 0 0 0 ;
 }
 
 .work {
@@ -149,6 +149,10 @@
 
 .photo-share {
     @include work("photo-share");
+}
+
+.cma{
+    @include work("cma");
 }
 
 // Media Queries

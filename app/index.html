@@ -4,12 +4,14 @@
         <meta charset="utf-8">
         <title>Jonathan Goley</title>
         <meta name="description" content="Web developer with the analytical mind of a programmer and the creativity of an artist.">
+        <!--<PageMap><DataObject type="document"><Attribute name="title">Jonathan Goley</Attribute><Attribute name="description">A web developer with the analytical mind of a programmer and the creativity of an artist.</Attribute></DataObject></PageMap>-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="google-site-verification" content="Co2OZ5qskHXfaWPbEyp6z5T-bR3cm9AEVzLDKGOyAwo" />
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-        <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Oswald|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
         </head>
         <body>
             <div class="main-container">
@@ -23,8 +25,8 @@
                             <li><a href="#work">Work</a></li>
                         </ul>
                         <ul class="right">
+                            <li><a href="#blog">Blog</a></li>
                             <li><a href="#contact">Connect</a></li>
-                            <li><a href="http://blog.jonathangoley.com">Blog</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -79,7 +81,7 @@
                             </div>
                             <div class="links">
                                 <a href="http://jgoley.github.io/Pollinate/" class="site">Live</a>
-                                <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">Code</a>
+                                <a href="https://github.com/jgoley/Pollinate" class="code">Code</a>
                             </div>
                         </div>
                         <!-- TAP -->
@@ -114,23 +116,6 @@
                             <div class="links">
                                 <a href="http://jgoley.github.io/TIY_22-Crack-Chat-App/" class="site">Live</a>
                                 <a href="https://github.com/jgoley/TIY_22-Crack-Chat-App" class="code">Code</a>
-                            </div>
-                        </div>
-                        <!-- CMA -->
-                        <div class="be-curator">
-                            <div class="details">
-                                <h3>Columbia Museum of Art</h3>
-                                <p>I led an effort to redesign the Museum's website. Our goals were to simplify the UI and make key information easily accessible</p>
-                                <ul class="stack">
-                                    <li>PHP</li>
-                                    <li>MySQL</li>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                            </div>
-                            <div class="links">
-                                <a href="https://www.columbiamuseum.org/" class="site span-width">Live</a>
-                                <!-- <a href="http://github.com/colamuseum/tap-into-cma" class="code">Code</a> -->
                             </div>
                         </div>
                         <!-- Photo Share -->
@@ -183,6 +168,23 @@
                                 <a href="https://github.com/jgoley/TIY-17_Turn-Based-Game" class="code">Code</a>
                             </div>
                         </div>
+                        <!-- CMA -->
+                        <div class="cma">
+                            <div class="details">
+                                <h3>Columbia Museum of Art</h3>
+                                <p>I led an effort to redesign the Museum's website. Our goals were to simplify the UI and make key information easily accessible</p>
+                                <ul class="stack">
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <a href="https://www.columbiamuseum.org/" class="site span-width">Live</a>
+                                <!-- <a href="http://github.com/colamuseum/tap-into-cma" class="code">Code</a> -->
+                            </div>
+                        </div>
                     </div>
                     <div class="other-work">
                         <div class="main-wrap">
@@ -191,7 +193,7 @@
                                 <ul class="other-work-links">
                                     <li class="photogs-link">
                                         <h3>Photography</h3>
-                                        <p>I take photos the old school way: with raw chemicals, glass plates and big analog cameras</p>
+                                        <p>I take photos the old school way: with raw chemicals that I mix, glass plates and big analog cameras</p>
                                     </li>
                                     <li class="videos-link">
                                         <h3>Video Production</h3>
@@ -224,6 +226,20 @@
                         </div>
                     </div>
         </section>
+
+        <section id="blog" class="blog">
+            <div class="main-wrap blog-warp">
+                <div class="blog-left">
+                    <h1>Blog</h1>
+                    <div class="blog-posts-shortList">
+                </div>
+                    <a href="http://blog.jonathangoley.com" class="more">View more posts</a>
+                </div>
+                <div class="blog-posts-wrap">
+                </div>
+            </div>            
+        </section>
+        
         <section id="contact" class="contact">
             <div class="main-wrap">
                 <div class="contact-info">
@@ -249,22 +265,23 @@
             </div>
         </section>
 
-<!--         <section id="blog" class="blog">
-            <div class="main-wrap blog-warp">
-                <h1>Blog</h1>
-                <div class="blog-posts-wrap">
-                    <script id="blog-post-template" type="text/template">
-                        <h2><%=title %></h2>
-                        <p><%=contentSnippet %></p>
-                        <a href="<%=link %>">Read More</a>
-                    </script>
-                </div>
-            </div>            
-        </section> -->
 
         <footer>
+            <div class="main-wrap">
+                <h1>&copy; Jonathan Goley</h1>
+            </div>
         </footer>
     </div>
+    <script id="blog-post-template" type="text/template">
+        <h2><%=title %></h2>
+        <p class="date"><%=moment(new Date(publishedDate)).fromNow() %></p>
+        <p class="snippet"><a href="<%=link %>" class="more read-more">Read More</a><%=contentSnippet %></p>
+        
+    </script>
+    <script id="blog-postList-template" type="text/template">
+        <a href="<%=link %>"><%=title %> <span><%=moment(new Date(publishedDate)).fromNow() %></span></a>
+
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -273,6 +290,7 @@
     <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
     <script src="bower_components/underscore/underscore.js" ></script>
     <script src="js/parse.js"></script>
+    <script src="bower_components/moment/moment.js" ></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
@@ -280,6 +298,7 @@
     <script src="js/application.js"></script>
     <script src="js/main.js"></script>
     <script src="js/other-work.js"></script>
+    <script src="js/blog.js"></script>
     <!-- endbuild -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
