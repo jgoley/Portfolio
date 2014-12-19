@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Jonathan Goley</title>
+        <meta charset="utf-8"> 
         <meta name="description" content="Web developer with the analytical mind of a programmer and the creativity of an artist.">
         <!--<PageMap><DataObject type="document"><Attribute name="title">Jonathan Goley</Attribute><Attribute name="description">A web developer with the analytical mind of a programmer and the creativity of an artist.</Attribute></DataObject></PageMap>-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +53,7 @@
                     </div>
                     <div class="bio-text hidden">
                         <h2>Jonathan Goley <span class="aka">aka 'J.Go'</span></h2>
-                        <p><img src="images/jonathan2.jpg" class="left-image">I grew up in the shadow of two older brothers and enjoyed the luxury of attending the elementary school of which my father was principal. I played soccer, cried when my cats died and wanted to be a teenage mutant ninja turtle. </p>
+                        <p><img src="images/jonathan2.jpg" class="left-image" alt="Image of Jonathan Goley">I grew up in the shadow of two older brothers and enjoyed the luxury of attending the elementary school of which my father was principal. I played soccer, cried when my cats died and wanted to be a teenage mutant ninja turtle. </p>
                         <p>
                         High school exposed me to the two interests with which I have devoted much of my life: photography and programming. I developed a simple point of sale program in BASIC for an imaginary pizza joint and spent hours in the school's darkroom watching silver coalesce into an image.
                         </p>
@@ -230,7 +231,7 @@
         <section id="blog" class="blog">
             <div class="main-wrap blog-warp">
                 <div class="blog-left">
-                    <h1>Blog</h1>
+                    <h2 class="sub-header">Blog</h2>
                     <div class="blog-posts-shortList">
                 </div>
                     <a href="http://blog.jonathangoley.com" class="more">View more posts</a>
@@ -243,9 +244,9 @@
         <section id="contact" class="contact">
             <div class="main-wrap">
                 <div class="contact-info">
-                    <h1>Get in touch &amp; Connect</h1>
+                    <h2 class="sub-header">Get in touch &amp; Connect</h2>
                     <ul class="contact-methods">
-                        <li><a href="mailto:jgoley@gmail.com?subject=Just looked at your portfolio..." class="email">jgoley@gmail.com</a></li>
+                        <li><a href="mailto:jgoley@gmail.com?subject=Just%20looked%20at%20your%20portfolio..." class="email">jgoley@gmail.com</a></li>
                         <li><a href="tel:1-803-767-3375" class="tel">(803)-767-3375</a></li>
                     </ul>
                     <ul class="social">
@@ -255,10 +256,12 @@
                     </ul>
                 </div>
                 <form class="send-message">
-                    <label for="fromName">Name:</label>
-                    <input type="text" name="fromName" placeholder="Your Name">
-                    <label for="fromEmail">Email address:</label>
-                    <input type="email" name="fromEmail" placeholder="email@domain.com">
+                    <label for="fromName">Name:
+                        <input type="text" name="fromName" id="fromName" placeholder="Your Name">
+                    </label>
+                    <label for="fromEmail">Email address:
+                        <input type="email" name="fromEmail" id="fromEmail" placeholder="email@domain.com">
+                    </label>
                     <textarea name="message" placeholder="Your message"></textarea>
                     <input type="submit" value="Send Message">
                 </form>
@@ -268,12 +271,12 @@
 
         <footer>
             <div class="main-wrap">
-                <h1>&copy; Jonathan Goley</h1>
+                <h2>&copy; Jonathan Goley</h2>
             </div>
         </footer>
     </div>
     <script id="blog-post-template" type="text/template">
-        <h2><%=title %></h2>
+        <h3><%=title %></h3>
         <p class="date"><%=moment(new Date(publishedDate)).fromNow() %></p>
         <p class="snippet"><a href="<%=link %>" class="more read-more">Read More</a><%=contentSnippet %></p>
         

@@ -130,12 +130,18 @@ ul {
 
 section {
     @include outer-container(100%);
-    h1{
+    h1,
+    .sub-header{
         font-size: 3em;
     }
     h2{
         text-align: center;
         font-size:200%;
+    }
+    .sub-header{
+        text-align: left;
+        margin: 0 0 .625em;
+        line-height: 1.13em;
     }
 }
 
