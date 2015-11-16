@@ -1,191 +1,230 @@
 .about {
-    padding-top: em(120px);
-    // padding-bottom: em(100px);
-    background: $primaryBG; //url(../images/jg-2.jpg) center center;
-    background-size: cover;
+  padding-top: em(66px);
+  background-size: cover;
+}
+
+.hero {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background: black;
+}
+
+video,
+.statement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+video {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .statement {
-    text-align: center;
-    margin-bottom: em(30px);
-    font-size: 200%;
-    @extend .dark-shadow;
-    color: #FFF;
+  margin-top: 0;
+  background: RGBA(100, 100, 100, .7);
+  z-index: 100;
+  h1 {
     padding: 0 20px;
-    letter-spacing:.02em;
-
+    margin: 0;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 150%;
+    text-align: center;
+    @extend .dark-shadow;
+    letter-spacing: .02em;
+  }
 }
 
 .skills-header {
-    border-bottom: 1px solid #FFF;
-    text-align: center;
-    padding-bottom: 5px;
-    margin: 0;
+  border-bottom: 1px solid #FFF;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 0;
 }
 
 .skills-wrap {
-    border-top: 1px solid #FFF;
+  border-top: 1px solid #FFF;
 }
 
 .skills {
-    $max-width: $max;
-    @include outer-container;
-    @extend .light-shadow;
-    li {
-        @include span-columns(6);
-        @include omega;
-        border-bottom: 1px solid #FFF;
-        text-align: center;
-        min-height: 170px;
-        padding: em(15px);
-    }
+  $max-width: $max;
+  @include outer-container;
+  @extend .light-shadow;
+  background-color: #CCC;
+  li {
+    @include span-columns(6);
+    @include omega;
+    border-bottom: 1px solid #FFF;
+    text-align: center;
+    min-height: 170px;
+    padding: em(15px);
+  }
 }
 
 .additional-wrap {
-    @include outer-container;
-    a{
-    	color:$text;
-    	&:hover{
-    		color:$l-yellow;
-    	}
+  @include outer-container;
+  background-color: white;
+  a {
+    color: $text;
+    &:hover {
+      color: $primaryBG;
+      text-shadow: none;
     }
+  }
 }
 
 .additional-info {
-    padding: em(50px) 0;
-    @include span-columns(12);
-    text-align: center;
-    font-size: 150%;
-    color: #FFF;
-    a {
-        &::before {
-            display: block;
-            font-size: 300%;
-        }
-        &:hover{
-            text-shadow: 0 1px 0 rgba(0,0,0,.4);
-        }
+  padding: em(50px) 0;
+  @include span-columns(12);
+  text-align: center;
+  font-size: 150%;
+  color: #FFF;
+  a {
+    &::before {
+        display: block;
+        font-size: 300%;
     }
+  }
 }
 
 .resume {
-    @include span-columns(6, border-collapse);
-    @include buildIcon("r");
-    @include omega;
+  @include span-columns(6, border-collapse);
+  @include buildIcon("r");
+  @include omega;
 }
 
 .bio {
-    @include span-columns(6, border-collapse);
-    @include buildIcon("i");
-    @include omega;
+  @include span-columns(6, border-collapse);
+  @include buildIcon("i");
+  @include omega;
 }
 
 .bio-text {
-    @include outer-container;
-    @include span-columns(11);
-    @include shift(.5);
-    margin-bottom: em(20px);
-    @extend .light-shadow;
-	padding-bottom:em(20px);
-    h2{
-		text-align: left;
-        margin-top:0;
-		span{
-			font-size: 60%;
-		}
-	}
-
+  @include outer-container;
+  @include span-columns(11);
+  @include shift(.5);
+  margin-bottom: em(20px);
+  @extend .light-shadow;
+  background-color: white;
+  padding-bottom: em(20px);
+  h2 {
+    text-align: left;
+    margin-top: 0;
+    span {
+      font-size: 60%;
+    }
+  }
 }
 
-.left-image{
-    float: left;
-    height: 250px;
-    padding: 0 10px 10px 0;
+.left-image {
+  float: left;
+  height: 250px;
+  padding: 0 10px 10px 0;
 }
 
 .like {
-    margin: em(50px);
-    text-align: center;
+  margin: em(50px);
+  text-align: center;
 }
 
 .web-dev {
-    display: block;
-    font-size: 150%;
-    text-transform: uppercase;
-    @extend .light-shadow;
-    color: #333;
+  display: block;
+  font-size: 200%;
+  text-transform: uppercase;
+  @extend .light-shadow;
+  color: white;
 }
 
 .mind,
 .artist {
-    // color: #FFF;
-    color: $l-yellow;
-    @extend .dark-shadow;
-    // span {
-    //     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-    //     color: $l-yellow;
-    // }
+  color: $orange;
+  @extend .dark-shadow;
+  // span {
+  //     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  //     color: $l-yellow;
+  // }
+}
+
+.artist {
+  color: $yellow;
 }
 
 .contact-top {
-    background: $secondary;
-    text-align: center;
+  background: $secondary;
+  text-align: center;
+  color: #FFF;
+  border-radius: 3px;
+  // display: block;
+  padding: em(15px) em(30px);
+  &:hover {
     color: #FFF;
-    border-radius: 3px;
-    // display: block;
-    padding: em(15px) em(30px);
-    &:hover {
-        color: #FFF;
-    }
-    margin: 10px auto;
+  }
+  margin: 10px auto;
 }
 
 @include media($tablet) {
-
-    .bio-text {
-        @include outer-container;
-        @include span-columns(8);
-        @include shift(2);
-    }
+  .bio-text {
+    @include outer-container;
+    @include span-columns(8);
+    @include shift(2);
+  }
+  .statement {
+    font-size: 150%;
+  }
 }
 
-
 @include media($desktop) {
-    .skills-wrap {
-        border-top: 1px solid #FFF;
-        border-bottom: 1px solid #FFF;
+  .skills-wrap {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+  }
+  .skills {
+    li {
+      @include span-columns(3, block-collapse);
+      @include omega();
+      text-align: center;
+      border-bottom: 0;
+      border-right: 1px solid #FFF;
+      min-height: 150px;
+      padding: em(15px);
+      &:last-child {
+          border: 0;
+      }
     }
-    .skills {
-        li {
-            @include span-columns(3, block-collapse);
-            @include omega();
-            text-align: center;
-            border-bottom: 0;
-            border-right: 1px solid #FFF;
-            min-height: 150px;
-            padding: em(15px);
-            &:last-child {
-                border: 0;
-            }
-        }
-    }
-    .statement {
-        font-size: 250%;
-    }
-    .additional-info {
-        @include span-columns(8);
-        @include shift(2);
-        font-size: 150%;
-    }
-
-    .bio-text {
-        @include outer-container;
-        @include span-columns(6);
-        @include shift(3);
-    }
-    .left-image{
-        margin-left: -6.875em;
-        padding:em(10px) em(20px) em(10px) em(0);
-        height: 300px;
-    }
+  }
+  .statement {
+      font-size: 200%;
+  }
+  .additional-info {
+    @include span-columns(8);
+    @include shift(2);
+    font-size: 150%;
+  }
+  .bio-text {
+    @include outer-container;
+    @include span-columns(6);
+    @include shift(3);
+  }
+  .left-image {
+    margin-left: -6.875em;
+    padding: em(10px) em(20px) em(10px) em(0);
+    height: 300px;
+  }
+  video {
+    min-height: 100%;
+  }
 }

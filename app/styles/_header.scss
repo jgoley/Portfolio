@@ -6,7 +6,7 @@ header {
     margin: 0 auto;
     z-index: 1000;
     padding: 2em;
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid #CCC;
     overflow: hidden;
 }
 
@@ -53,7 +53,7 @@ header {
     }
     .current {
         a {
-            background: $blue;
+            background: #CCC;
             transition: .4s;
             color: #000;
             @extend .light-shadow;
@@ -142,7 +142,7 @@ header {
             background: none;
             transition: .4s;
             &:hover {
-                background: $blue;
+                background: #CCC;
                 transition: .4s;
                 color: #000;
                 text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
