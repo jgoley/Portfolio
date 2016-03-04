@@ -1,7 +1,7 @@
-@import "../bower_components/bourbon/dist/bourbon";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 $gutter: em(15px);
-$max-width: 100%; 
+$max-width: 100%;
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
@@ -41,6 +41,10 @@ $desktop: min-width 1000px;
 
 $max: 1000px;
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
 @mixin fillParent {
     display: block;
     position: absolute;
@@ -55,7 +59,7 @@ $max: 1000px;
         content:'#{$w}';
         @extend .icon;
 
-    }   
+    }
 }
 
 .dark-shadow{

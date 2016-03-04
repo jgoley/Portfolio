@@ -5,7 +5,7 @@
 
 .hero {
   position: relative;
-  min-height: 500px;
+  min-height: 350px;
   overflow: hidden;
   background: black;
 }
@@ -21,6 +21,7 @@ video,
 }
 
 video {
+  display: none;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
@@ -32,7 +33,9 @@ video {
 
 .statement {
   margin-top: 0;
-  background: RGBA(100, 100, 100, .7);
+  background: url(../images/jgo-working.jpg);
+  background-size: cover;
+  background-position: center center;
   z-index: 100;
   h1 {
     padding: 0 20px;
@@ -56,22 +59,29 @@ video {
   margin: 0;
 }
 
-.skills-wrap {
-  border-top: 1px solid #FFF;
-}
-
 .skills {
   $max-width: $max;
   @include outer-container;
   @extend .light-shadow;
-  background-color: #CCC;
   li {
     @include span-columns(6);
-    @include omega;
-    border-bottom: 1px solid #FFF;
+    @include omega(2n);
+    margin: 0;
+    width: 50%;
+    border-right: 1px solid #CCC;
     text-align: center;
     min-height: 170px;
     padding: em(15px);
+    &:nth-of-type(even) {
+      border: 0;
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      border-bottom: 1px solid #CCC;
+    }
+    &:nth-of-type(3) {
+      border-image: linear-gradient(to bottom, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0)) 1 100%;
+    }
   }
 }
 
@@ -143,20 +153,21 @@ video {
 
 .web-dev {
   display: block;
-  font-size: 200%;
+  margin-bottom: 5px;
+  font-size: 300%;
+  line-height: 1.2em;
   text-transform: uppercase;
   @extend .light-shadow;
   color: white;
+  span {
+    display: block;
+  }
 }
 
 .mind,
 .artist {
   color: $orange;
   @extend .dark-shadow;
-  // span {
-  //     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  //     color: $l-yellow;
-  // }
 }
 
 .artist {
@@ -168,7 +179,6 @@ video {
   text-align: center;
   color: #FFF;
   border-radius: 3px;
-  // display: block;
   padding: em(15px) em(30px);
   &:hover {
     color: #FFF;
@@ -185,29 +195,63 @@ video {
   .statement {
     font-size: 150%;
   }
+  .hero {
+    min-height: 425px;
+  }
+  .web-dev {
+    margin-bottom: 5px;
+    font-size: 250%;
+    line-height: 1.2em;
+    span {
+      display: inline-block;
+    }
+
+  }
 }
 
 @include media($desktop) {
+  .web-dev {
+    margin-bottom: 5px;
+    font-size: 200%;
+    line-height: 1.2em;
+    span {
+      display: inline-block;
+    }
+  }
+  .hero {
+    min-height: 425px;
+  }
+  video {
+    display: block;
+  }
   .skills-wrap {
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #FFF;
   }
   .skills {
     li {
-      @include span-columns(3, block-collapse);
+      @include omega-reset(2n);
       @include omega();
+      @include span-columns(3);
+      margin: 0;
+      width: 25%;
       text-align: center;
-      border-bottom: 0;
-      border-right: 1px solid #FFF;
       min-height: 150px;
       padding: em(15px);
+      border-image: linear-gradient(to bottom, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0)) 1 100%;
+      border-left: 0;
       &:last-child {
           border: 0;
+      }
+      &:nth-of-type(even) {
+        border-right: 1px solid;
+        border-image: linear-gradient(to bottom, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0)) 1 100%;
       }
     }
   }
   .statement {
       font-size: 200%;
+      background: RGBA(100, 100, 100, .7);
   }
   .additional-info {
     @include span-columns(8);
