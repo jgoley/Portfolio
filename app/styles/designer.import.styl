@@ -1,0 +1,22 @@
+#designer
+  display flex
+  align-items center
+  justify-content flex-end
+  height 100%
+  text-align right
+  > div
+    width 100%
+  +above($mobile)
+    align-items flex-start
+    justify-content flex-start
+    text-align left
+  .soon
+    font-size 3em
+    line-height .8
+    +above($mobile)
+      margin-top 30px
+      font-size 6em
+    +above($tablet)
+      font-size 10em
+    span
+      display block

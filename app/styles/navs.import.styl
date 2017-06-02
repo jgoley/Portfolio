@@ -1,0 +1,89 @@
+.page-nav
+  flex 1 1 auto
+  display flex
+  padding-bottom 15vh
+  display flex
+  flex 1
+  +above($mobile)
+    padding 0
+  ul
+    display flex
+    flex 1 1 auto
+    flex-direction column
+    align-items flex-end
+    justify-content flex-end
+    list-style none
+    margin 0
+    +between($mobile, $tablet)
+      justify-content center
+    +above($tablet)
+      justify-content space-around
+  li
+    display flex
+    align-items center
+    font-family din
+    text-transform uppercase
+    text-align right
+    +above($mobile)
+      margin 0
+  a
+    flex 1 1 auto
+    text-overflow clip
+    display block
+    align-items center
+    color #CCC
+    padding .25em 25px 0 10px
+    line-height 1
+    transition .1s ease-in-out
+    border-top-left-radius $border-radius
+    border-bottom-left-radius $border-radius
+    &.sized
+      opacity 1
+    +below($tablet)
+      height auto !important
+      font-size 6em !important
+    +below($mobile)
+      font-size 3em !important
+    +above($mobile)
+      white-space nowrap
+    &:hover
+    &:focus
+      color white
+      background $secondary
+      box-shadow none
+      outline 0
+      padding-right 30px
+      +above($tablet)
+        background none
+        color $secondary
+    &:active
+      background $primary
+      color white
+      +above($tablet)
+        background none
+        color $primary
+
+.sub-nav
+  position fixed
+  top 30vh
+  left 0px
+  padding-left 10px
+  z-index 1000
+  display none
+  +above($mobile)
+    display block
+  ul
+    list-style none
+    padding 0
+    font-family 'din'
+    text-transform uppercase
+    font-size 2em
+  a
+    color lighten($primary, 75%)
+    &:hover
+      color $secondary
+  li
+    &.active
+      a
+        pointer-events none
+        color $primary

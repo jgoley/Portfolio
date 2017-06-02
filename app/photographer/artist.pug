@@ -1,0 +1,102 @@
+doctype html
+html(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Jonathan Goley - Photographer - Artist
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    // build:css styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet', href='/styles/main.css')
+    // endbuild
+  body.photographer(load=transition)
+    header
+      a(href="/")
+        span.badge
+      a(href="/")
+        h1.jgo-name Jonathan Goley
+      nav#main-nav
+        button#main-menu-toggle.show-menu ☰
+        ul
+          li
+            a(href='/web-developer.html')
+              span Web Developer
+          li.active.with-children
+            a(href='/photographer/')
+              span Photographer
+            ul
+              li.active
+                a(href='/photographer/artist.html')
+                  span Artist
+              li
+                a(href='/photographer/documentarian.html')
+                  span Documentarian
+          li
+            a(href='/videographer.html')
+              span Videographer
+          li
+            a(href='/designer.html')
+              span Designer
+          li.exit
+    h1.page-title Photographer
+    nav.sub-nav
+      ul
+        li.active
+          a(href="/photographer/artist.html") Artist
+        li
+          a(href="/photographer/documentarian.html") Documentarian
+          
+    section#fine-art-content.container.invisible
+      img(src='/images/photographer/artist/1.jpg')
+      img(src='/images/photographer/artist/2.jpg')
+      img(src='/images/photographer/artist/4.jpg')
+      img(src='/images/photographer/artist/5.jpg')
+      img(src='/images/photographer/artist/7.jpg')
+      img(src='/images/photographer/artist/8.jpg')
+      img(src='/images/photographer/artist/9.jpg')
+      img(src='/images/photographer/artist/10.jpg')
+      img(src='/images/photographer/artist/11.jpg')
+      img(src='/images/photographer/artist/12.jpg')
+      img(src='/images/photographer/artist/13.jpg')
+      img(src='/images/photographer/artist/14.jpg')
+      img(src='/images/photographer/artist/15.jpg')
+      img(src='/images/photographer/artist/16.jpg')
+      img(src='/images/photographer/artist/17.jpg')
+      img(src='/images/photographer/artist/18.jpg')
+      img(src='/images/photographer/artist/19.jpg')
+      img(src='/images/photographer/artist/20.jpg')
+      img(src='/images/photographer/artist/21.jpg')
+      img(src='/images/photographer/artist/22.jpg')
+      img(src='/images/photographer/artist/23.jpg')
+      img(src='/images/photographer/artist/24.jpg')
+      img(src='/images/photographer/artist/25.jpg')
+      img(src='/images/photographer/artist/26.jpg')
+      img(src='/images/photographer/artist/27.jpg')
+      img(src='/images/photographer/artist/28.jpg')
+      img(src='/images/photographer/artist/29.jpg')
+      img(src='/images/photographer/artist/30.jpg')
+      img(src='/images/photographer/artist/31.jpg')
+      img(src='/images/photographer/artist/32.jpg')
+      img(src='/images/photographer/artist/33.jpg')
+      img(src='/images/photographer/artist/34.jpg')
+      img(src='/images/photographer/artist/35.jpg')
+      img(src='/images/photographer/artist/36.jpg')
+      img(src='/images/photographer/artist/37.jpg')
+      img(src='/images/photographer/artist/38.jpg')
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js')
+    script(src='../scripts/main.js')

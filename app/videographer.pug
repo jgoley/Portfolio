@@ -1,0 +1,49 @@
+doctype html
+html(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Jonathan Goley
+    link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,700' rel='stylesheet')
+    link(rel='stylesheet', href='styles/main.css')
+  body.videographer
+    header
+      a(href="/")
+        span.badge
+      a(href="/")
+        h1.jgo-name Jonathan Goley
+      nav#main-nav
+        button.show-menu ☰
+        ul
+          li
+            a(href='web-developer.html')
+              span Web Developer
+          li
+            a(href='photographer/')
+              span Photographer
+          li.active
+            a(href='videographer.html')
+              span Videographer
+          li
+            a(href='designer.html')
+              span Designer
+          li.exit
+    h1.page-title Videographer
+    section#videographer
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js')
+    script(src='https://unpkg.com/react@15/dist/react.js')
+    script(src='https://unpkg.com/react-dom@15/dist/react-dom.js')
+    script(src='scripts/main.js')
+    script(src='scripts/skills.js')
+    script(src='scripts/videographer.js')

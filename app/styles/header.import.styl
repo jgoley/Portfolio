@@ -1,0 +1,203 @@
+header
+  display flex
+  background $primary
+  flex-direction row
+  z-index 10
+  min-height 55px
+  position fixed
+  top 0
+  width 100%
+  border-bottom 2px solid white
+  +between($mobile, $tablet)
+    justify-content flex-end
+  +above($tablet)
+    overflow hidden
+  .badge
+    background url(../images/badge.svg) no-repeat
+    position absolute
+    width 75px
+    left 1em
+    top -20px
+    height 125px
+    transition top .15s ease-in-out
+    &:hover
+      top -15px
+    +above($mobile)
+      left 1.35em
+      width 100px
+    +above($tablet)
+      display none
+      width 130px
+      height 155px
+  .jgo-name
+    display none
+    margin 0 0 0 15px
+    font-size 80px
+    line-height 80px
+    text-transform uppercase
+    font-family din
+    color #fff
+    font-weight normal
+    text-overflow clip
+    height 55px
+    letter-spacing .01em
+    padding-right 25px
+    white-space nowrap
+    text-align right
+    transition margin .15s ease-in-out
+    +above($tablet)
+      display block
+    &:hover
+      margin-left 20px
+  nav
+    display flex
+    flex 1 1 auto
+    min-height 55px
+    button
+      display block
+      margin-left auto
+      margin-right 15px
+      background none
+      border 0
+      color white
+      font-size 1.75em
+      cursor pointer
+      &:active
+        color $secondary
+      &:focus
+        outline 0
+        box-shadow none
+      +above($mobile)
+        display none
+    &.active
+      ul
+        display flex
+  ul
+    list-style none
+    align-items stretch
+    margin-left auto
+    visibility visible
+    position fixed
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background alpha($primary, 90%)
+    display none
+    flex-direction column
+    justify-content center
+    align-items center
+    text-align center
+    +above($mobile)
+      display flex
+      flex-direction row
+      background none
+      position static
+      align-items stretch
+    li
+      display flex
+      align-items stretch
+      &.with-children
+        display flex
+        flex-direction column
+        align-items center
+        +above($mobile)
+          flex-direction row
+          align-items stretch
+      ul
+        position static
+        display flex
+        background none
+        font-size .75em
+        margin-left initial
+        +above($mobile)
+          display none
+      a
+        display flex
+        align-items center
+        padding 0 1em
+        white-space nowrap
+        font-family din
+        text-transform uppercase
+        color white
+        text-decoration none
+        font-weight normal
+        letter-spacing .03em
+        box-shadow inset 0 0 0 white
+        transition box-shadow .125s ease-in-out, padding .125s ease-in-out, color .125s ease-in-out
+        span
+          transition transform .125s ease-in-out
+        &:active
+          color $secondary
+        +above($mobile)
+          &:hover
+            box-shadow inset 0px -5px 0 white
+            padding-bottom 5px
+            color white
+            span
+              transform scale(1.05)
+      &.active
+        ul
+          li
+            a
+              pointer-events all
+              background none
+              color white
+              cursor pointer
+        a
+          pointer-events none
+          cursor default
+          &
+          &:hover
+            background white
+            color $secondary
+      &.exit
+        position relative
+        width 2em
+        height 2em
+        margin-top .5em
+        display flex
+        align-items center
+        text-transform none
+        text-align center
+        border-radius 50%
+        border 2px solid $secondary
+        cursor pointer
+        transition transform .115s ease-in-out, background .115s ease-in-out
+        &:hover
+          border-color lighten($secondary, 20%)
+          &::before
+          &::after
+            background lighten($secondary, 20%)
+        &::before
+        &::after
+          content ''
+          display block
+          position absolute
+          height 2px
+          width 100%
+          background $secondary
+          transform rotate(45deg)
+          transform-origin center
+          -webkit-transform-origin center
+        &::after
+          transform rotate(-45deg)
+        &:active
+          background $secondary
+          transform scale(.9)
+          border-color white
+          &::before
+          &::after
+            background white
+        +above($mobile)
+          display none
+        a
+          text-transform none
+      span
+        font-size 2em
+        vertical-align text-bottom
+        line-height 2
+        padding-top .25em
+        +above($mobile)
+          font-size 1.2em
+          padding-top .4em

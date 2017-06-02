@@ -1,0 +1,31 @@
+.skills
+  margin-left -40px
+  margin-right -40px
+  padding-left 40px
+  padding-right 40px
+  padding-top 25px
+  margin-bottom 2em
+  background lighten($primary, 92%)
+  display flex
+  align-items center
+  +above($mobile)
+    padding-top 0
+  h1
+    color $primary
+    padding-top 8px
+    margin-right .75em
+    font-size 1.5em
+    +above($mobile)
+      font-size 1.75em
+  p
+    font-size .8em
+    margin 0
+    +above($mobile)
+      font-size .9em
+    span
+      &:nth-of-type(odd)
+        font-size 125%
+  ul
+    display flex
+    li
+      margin-right .5em
