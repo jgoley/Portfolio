@@ -154,7 +154,6 @@ class List extends React.Component {
 
 class WebsiteVideo extends React.Component {
   render () {
-    console.log(this.props)
     return (
       <video src={`../${this.props.video}`} controls></video>
     )
@@ -165,7 +164,6 @@ class WebProject extends React.Component {
 
   render () {
     var project = this.props.project
-    console.log(this.props)
     return (
       <article>
         <h1>{project.title}</h1>

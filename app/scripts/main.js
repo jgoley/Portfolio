@@ -11,11 +11,6 @@ function adjustTextSize (event) {
     var textHeight = parentHeight
     var elementStyle = element.style
     var currentHeight = element.offsetHeight
-    // currentHeight -= (currentHeight / 3)
-    // var currentWidth = element.offsetWidth
-    // textHeight = windowWidth * (currentHeight / currentWidth)
-    // if (textHeight >= parentHeight)
-    //   textHeight = parentHeight
     elementStyle.height = textHeight + 'px'
     elementStyle.fontSize = textHeight + 'px'
     element.classList.add('sized')
@@ -43,8 +38,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     exit.addEventListener('click', toggleMainNav)
 
   var path = window.location.pathname.replace(/\.html$/, '')
-  if (path === '/')
+  if (path === '/') {
     adjustTextSize(event)
+    toggleMainNav()
+  }
   else if (path.includes('artist')) {
     transition('artist')
     var links = document.getElementsByTagName('a')
@@ -58,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 })
 
 function transition(className) {
-  document.body.classList.add(className)
+  setTimeout(() => document.body.classList.add(className), 0)
 }
 
 function returnState(event) {
