@@ -76,8 +76,11 @@ article
         min-width 98%
   .links
     display flex
-    span
-      margin 0 1em
+    li
+      &:not(:last-of-type)
+        &:after
+          margin 0 1em
+          content '|'
 
 .primary
   margin-bottom 3em

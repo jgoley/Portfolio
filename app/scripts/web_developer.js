@@ -4,6 +4,7 @@ var primaryProjects = [
     url: 'http://tours.columbiamuseum.org',
     githubUrl: 'https://github.com/jgoley/museum-tour-web',
     appUrl: 'https://itunes.apple.com/us/app/tap-into-cma/id1129913149?mt=8',
+    backlogUrl: 'https://trello.com/b/jlc34JoD/tap',
     description: 'Web-based mobile tour application for the Columbia Museum of Art. The application allows the museum to offer an immersive multimedia (audio, video, imagery) experience on in-house iPods and visitor mobile devices.',
     type: 'primary',
     roles: ['UX/UI Design', 'Full-Stack Development', 'Dev-Ops'],
@@ -160,10 +161,32 @@ class WebsiteVideo extends React.Component {
   }
 }
 
+
 class WebProject extends React.Component {
 
+
+  otherUrl(type) {
+    let project = this.props.project
+    let linkText = ''
+    if (type === 'appUrl')
+      linkText = 'In the App Store'
+    else
+      linkText = 'Backlog'
+    if (project[type] && project[type].length > 0) {
+      return (
+        <li>
+          <a href={ project[type] } title={linkText} >
+            {linkText}
+          </a>
+        </li>
+      )
+    }
+    else
+      return null
+  }
+
   render () {
-    var project = this.props.project
+    let project = this.props.project
     return (
       <article>
         <h1>{project.title}</h1>
@@ -175,23 +198,14 @@ class WebProject extends React.Component {
               <List listItems={project.roles} listType='roles' />
             </div>
             <ul className='links'>
-              <li><a href={project.url} >On the Interwebs</a></li>
-              <span className='seperator'> | </span>
-              {
-                project.appUrl && project.appUrl.length > 0 ?
-                  <li>
-                    <a href={ project.appUrl } title='In the App Store' >
-                      In the App Store
-                    </a>
-                  </li>
-                : null
-              }
-              {
-                project.appUrl && project.appUrl.length > 0 ?
-                  <span className='seperator'> | </span>
-                : null
-              }
-              <li><a href={project.githubUrl} >Github Repo</a></li>
+              <li>
+                <a href={project.githubUrl} >Github Repo</a>
+              </li>
+              <li>
+                <a href={project.url} >On the Interwebs</a>
+              </li>
+              { this.otherUrl('appUrl') }
+              { this.otherUrl('backlogUrl', false) }
             </ul>
           </div>
         </div>
