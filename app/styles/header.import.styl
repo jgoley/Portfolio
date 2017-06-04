@@ -152,43 +152,20 @@ header
             background white
             color $secondary
       &.exit
-        position relative
-        width 2em
-        height 2em
         margin-top .5em
-        display flex
-        align-items center
-        text-transform none
-        text-align center
-        border-radius 50%
-        border 2px solid $secondary
         cursor pointer
         transition transform .115s ease-in-out, background .115s ease-in-out
+        font-size 4em
+        color white
         &:hover
-          border-color lighten($secondary, 20%)
           &::before
-          &::after
-            background lighten($secondary, 20%)
+            color lighten($secondary, 20%)
         &::before
-        &::after
-          content ''
+          content '\f05c'
           display block
-          position absolute
-          height 2px
-          width 100%
-          background $secondary
-          transform rotate(45deg)
-          transform-origin center
-          -webkit-transform-origin center
-        &::after
-          transform rotate(-45deg)
+          font-family 'FontAwesome'
         &:active
-          background $secondary
           transform scale(.9)
-          border-color white
-          &::before
-          &::after
-            background white
         +above($mobile)
           display none
         a

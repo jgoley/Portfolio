@@ -1,3 +1,8 @@
+.show-menu
+  &::before
+    content '\f0c9'
+    font-family 'FontAwesome'
+
 .home
   #main-nav
     li
@@ -19,7 +24,6 @@
     display flex
     flex 1 1 auto
     flex-direction column
-    align-items flex-end
     justify-content flex-end
     list-style none
     margin 0
@@ -57,20 +61,12 @@
       white-space nowrap
     &:hover
     &:focus
-      color white
-      background $secondary
+      color $secondary
       box-shadow none
       outline 0
       padding-right 30px
-      +above($tablet)
-        background none
-        color $secondary
     &:active
-      background $primary
-      color white
-      +above($tablet)
-        background none
-        color $primary
+      color $primary
 
 .sub-nav
   position fixed

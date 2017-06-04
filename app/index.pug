@@ -7,6 +7,7 @@ html(lang='')
     title Jonathan Goley
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     link(rel='stylesheet', href='styles/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   body.home
     header
       a(href="/")
@@ -23,6 +24,21 @@ html(lang='')
           a.page(href='videographer.html') Videographer
         li
           a.page(href='designer.html') Designer
+    section.about
+      a(href='/about.html') About
+      ul
+        li
+          a(href='mailto:jgoley@gmail.com' title='Email')
+            i.fa.fa-envelope
+        li
+          a(href='https://github.com/jgoley' title='Github')
+            i.fa.fa-github-square
+        li
+          a(href='https://twitter.com/jgoley' title='Twitter') 
+            i.fa.fa-twitter-square
+        li
+          a(href='https://www.linkedin.com/in/jgoley/' title='LinkedIn') 
+            i.fa.fa-linkedin-square
 
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

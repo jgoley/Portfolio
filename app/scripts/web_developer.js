@@ -18,7 +18,7 @@ var primaryProjects = [
     title: 'Animal Foster Management/Availability',
     url: 'http://54.175.158.93/',
     githubUrl: 'https://github.com/jgoley/animal-foster-management',
-    description: 'Application allowing animal foster organizations to view fosters who are available to help with animals. Originally developed for NYCACC',
+    description: 'Application allowing animal foster organizations to view fosters who are available to help with animals. Originally developed for NYCACC and in beta.',
     type: 'primary',
     roles: ['UX/UI Design', 'Full-Stack Development', 'Dev-Ops'],
     tech: ['React', 'Meteor.js', 'MongoDb', 'AWS', 'JSX', 'Stylus'],
@@ -108,9 +108,7 @@ var secondaryProjects = [
   },
 ]
 
-// https://itunes.apple.com/gw/app/good-question!/id1117995973?mt=8
-
-var skills = ['Meteor', 'React', 'CoffeScript', 'MongoDb', 'Jade', 'Stylus', 'SASS']
+var skills = ['Javascript', 'Meteor', 'React', 'MongoDb', 'CoffeScript', 'Jade', 'Stylus', 'SASS']
 
 class WebDeveloper extends React.Component {
   render() {
@@ -168,14 +166,20 @@ class WebProject extends React.Component {
   otherUrl(type) {
     let project = this.props.project
     let linkText = ''
-    if (type === 'appUrl')
+    let icon = ''
+    if (type === 'appUrl') {
       linkText = 'In the App Store'
-    else
+      icon = 'mobile'
+    }
+    else {
       linkText = 'Backlog'
+      icon = 'list'
+    }
     if (project[type] && project[type].length > 0) {
       return (
         <li>
           <a href={ project[type] } title={linkText} >
+            <i className={`fa fa-${icon}`}></i>
             {linkText}
           </a>
         </li>
@@ -199,10 +203,16 @@ class WebProject extends React.Component {
             </div>
             <ul className='links'>
               <li>
-                <a href={project.githubUrl} >Github Repo</a>
+                <a href={project.githubUrl} >
+                  <i className='fa fa-github'></i>
+                  Github Repo
+                </a>
               </li>
               <li>
-                <a href={project.url} >On the Interwebs</a>
+                <a href={project.url} >
+                  <i className='fa fa-globe'></i>
+                  On the Interwebs
+                </a>
               </li>
               { this.otherUrl('appUrl') }
               { this.otherUrl('backlogUrl', false) }

@@ -10,7 +10,7 @@ body
 p
   line-height 1.5em
   margin-top 0
-  color #51514c
+  color $text
 
 a
   text-decoration none
@@ -20,6 +20,9 @@ a
 
 ul
   list-style none
+  li
+    color $text
+    line-height 1.5em
 
 h1
 h2
@@ -76,11 +79,27 @@ article
         min-width 98%
   .links
     display flex
+    flex-wrap wrap
+    flex-direction column
+    +above($mobile)
+      flex-direction row
+    i
+      margin-right .5em
+      font-size 1.5em
+    a
+      display flex
+      align-items center
     li
-      &:not(:last-of-type)
-        &:after
-          margin 0 1em
-          content '|'
+      display flex
+      align-items center
+      margin-bottom .5em
+      +above($mobile)
+        margin-bottom 0
+        &:not(:last-of-type)
+          &:after
+            margin 0 1em
+            content '|'
+            color #CCC
 
 .primary
   margin-bottom 3em
