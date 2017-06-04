@@ -138,13 +138,14 @@ article
   transform rotate(90deg)
   transform-origin left
   font-size 10em
-  color lighten($primary, 92%)
+  color $title-secondary
   margin 0
   top -40px
   left 50px
   position fixed
   display none
   white-space nowrap
+  overflow hidden
   +above($mobile)
     display block
 
@@ -156,9 +157,3 @@ article
     margin-left 15px
   li
     margin-bottom 1px
-
-.flex
-  display flex
-
-video
-  background:

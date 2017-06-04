@@ -8,6 +8,7 @@ html(lang='')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     link(rel='stylesheet', href='styles/main.css')
     link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,700' rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   body.web-developer
     header
       a(href="/")
@@ -17,7 +18,7 @@ html(lang='')
       nav#main-nav
         button.show-menu 
         ul
-          li.active
+          li
             a(href='web-developer.html')
               span Web Developer
           li
@@ -62,6 +63,22 @@ html(lang='')
             | To satisfy my love of photography I taught myself a 19th-century process called wet plate collodion. #[a(href='/photographer/artist.html') Here's a sampling of my photos]
           li
             | And to satisfy my other miscellaneous interests I listen to NPR religiously, play disc golf and play guitar (along with a few other instruments).
+    ul.social
+      li.active
+        a(href='/about.html' title='About')
+          i.fa.fa-info-circle
+      li
+        a(href='mailto:jgoley@gmail.com' title='Email')
+          i.fa.fa-envelope
+      li
+        a(href='https://github.com/jgoley' title='Github')
+          i.fa.fa-github-square
+      li
+        a(href='https://twitter.com/jgoley' title='Twitter') 
+          i.fa.fa-twitter-square
+      li
+        a(href='https://www.linkedin.com/in/jgoley/' title='LinkedIn') 
+          i.fa.fa-linkedin-square
             
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
