@@ -1,0 +1,1 @@
+"use strict";var lazyLoad=new LazyLoad;console.log(lazyLoad);
