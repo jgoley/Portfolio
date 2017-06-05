@@ -26,6 +26,38 @@ function handleHeaderState (event) {
   lastScrollPosition = document.body.scrollTop
 }
 
+function transition(className) {
+  document.body.classList.add('transitioning')
+  setTimeout(() => document.body.classList.add(className), 0)
+  setTimeout(() => document.body.classList.remove('transitioning'), 1000)
+}
+
+function returnState(event) {
+  document.body.classList.add('transitioning')
+  var delay = 800
+  if (window.innerWidth <= 650) {
+    delay = 0
+  }
+  event.currentTarget.parentElement.classList.add('active')
+  var url = event.currentTarget.getAttribute('href')
+  event.preventDefault()
+  document.body.classList.remove('artist')
+  setTimeout(() => {window.location.href = url}, delay)
+  setTimeout(() => document.body.classList.remove('transitioning'), 1000)
+}
+
+function toggleNavs() {
+  var nav = document.getElementById('main-nav')
+  var social = document.getElementById('social-nav')
+  var navs = [nav, social]
+  navs.forEach((nav) => {
+    if (nav.classList.contains('active'))
+      nav.classList.remove('active')
+    else
+      nav.classList.add('active')
+  })
+}
+
 document.addEventListener('scroll', _.throttle(handleHeaderState, 100))
 window.addEventListener('resize', _.debounce(adjustTextSize, 100))
 
@@ -33,14 +65,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var showMenu = document.getElementsByClassName('show-menu').item(0)
   var exit = document.getElementsByClassName('exit').item(0)
   if (showMenu)
-    showMenu.addEventListener('click', toggleMainNav)
+    showMenu.addEventListener('click', toggleNavs)
   if (exit)
-    exit.addEventListener('click', toggleMainNav)
+    exit.addEventListener('click', toggleNavs)
 
   var path = window.location.pathname.replace(/\.html$/, '')
   if (path === '/') {
     adjustTextSize(event)
-    toggleMainNav()
+    toggleNavs()
   }
   else if (path.includes('artist')) {
     transition('artist')
@@ -53,27 +85,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
   else if (path.includes('documentarian'))
     transition('documentarian')
 })
-
-function transition(className) {
-  setTimeout(() => document.body.classList.add(className), 0)
-}
-
-function returnState(event) {
-  var delay = 800
-  if (window.innerWidth <= 650) {
-    delay = 0
-  }
-  event.currentTarget.parentElement.classList.add('active')
-  var url = event.currentTarget.getAttribute('href')
-  event.preventDefault()
-  document.body.classList.remove('artist')
-  setTimeout(function(){window.location.href = url}, delay)
-}
-
-function toggleMainNav() {
-  var nav = document.getElementById('main-nav')
-  if (nav.classList.contains('active'))
-    nav.classList.remove('active')
-  else
-    nav.classList.add('active')
-}

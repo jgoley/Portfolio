@@ -36,7 +36,9 @@ darkTransition()
     a
       opacity 1
   .sub-nav
-    transition-delay 1s
+  .social-nav
+  .social-nav a
+    transition-delay 1.5s
     transition 1s
 
   &.artist
@@ -75,13 +77,15 @@ darkTransition()
       &.active
         a
           color $photog-white
-  .social
-    a
-      color darken($photog-white, 75%)
 
   .show-menu
     color $photog-white
 
+  .social-nav
+    a
+      color darken($photog-white, 75%)
+      &:hover
+        color darken($photog-white, 25%)
 
 .documentarian
 .artist

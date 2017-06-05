@@ -8,20 +8,20 @@ var primaryProjects = [
     description: 'Web-based mobile tour application for the Columbia Museum of Art. The application allows the museum to offer an immersive multimedia (audio, video, imagery) experience on in-house iPods and visitor mobile devices.',
     type: 'primary',
     roles: ['UX/UI Design', 'Full-Stack Development', 'Dev-Ops'],
-    tech: ['Meteor.js', 'MongoDb', 'AWS', 'CoffeeScript', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'AWS', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: 'images/eidr-connect.mov',
     order: 1
   },
   {
-    title: 'Animal Foster Management/Availability',
+    title: 'Animal Foster Availability Management',
     url: 'http://54.175.158.93/',
     githubUrl: 'https://github.com/jgoley/animal-foster-management',
     description: 'Application allowing animal foster organizations to view fosters who are available to help with animals. Originally developed for NYCACC and in beta.',
     type: 'primary',
     roles: ['UX/UI Design', 'Full-Stack Development', 'Dev-Ops'],
-    tech: ['React', 'Meteor.js', 'MongoDb', 'AWS', 'JSX', 'Stylus'],
+    tech: ['React', 'Meteor.js', 'MongoDb', 'AWS', 'JSX', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: 'images/eidr-connect.mov'
@@ -49,7 +49,7 @@ var secondaryProjects = [
     description: 'EIDR Connect is a centralized web platform dedicated to tracking Emerging Infectious Diseases (EIDs). Through EIDR Connect, ongoing EID events can be curated by experts compared and individual emergence events can be explored in depth.',
     type: 'secondary',
     roles: ['UX/UI Design', 'Front End Development'],
-    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: ''
@@ -62,7 +62,7 @@ var secondaryProjects = [
     description: 'Network analysis tool that enables users to examine flight networks to identify where infected travelers and contaminated goods are likely to travel. Connectedness between airports is calculated using passenger, cargo, and network data.',
     type: 'secondary',
     roles: ['UX/UI Design', 'Front End Development'],
-    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: ''
@@ -75,7 +75,7 @@ var secondaryProjects = [
     description: 'Novel Infectious Agent Monitor highlights and discovers newly trending infectious diseases within ProMED mail posts using an advanced algorithm that analyzes historical data and disease mentions.',
     type: 'secondary',
     roles: ['UX/UI Design', 'Front End Development'],
-    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: ''
@@ -88,7 +88,7 @@ var secondaryProjects = [
     description: 'An easy to use annotation application that allows users to code, analyze and cross-analyze, store, and export text data.',
     type: 'secondary',
     roles: ['UX/UI Design', 'Front End Development'],
-    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: ''
@@ -101,14 +101,14 @@ var secondaryProjects = [
     description: 'The Global Ranavirus Reporting System allows users to create and manage records for Ranavirus studies and reports, import and export data, view tables and maps of reports, and leave reviews and comments on reports.',
     type: 'secondary',
     roles: ['UX/UI Design', 'Front End Development'],
-    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade', 'Stylus'],
+    tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
     video: ''
   },
 ]
 
-var skills = ['Javascript', 'Meteor', 'React', 'MongoDb', 'CoffeScript', 'Jade', 'Stylus', 'SASS']
+var skills = ['Javascript', 'Meteor', 'React', 'MongoDb', 'CoffeScript', 'Jade/Pug', 'Stylus', 'SASS']
 
 class WebDeveloper extends React.Component {
   render() {
