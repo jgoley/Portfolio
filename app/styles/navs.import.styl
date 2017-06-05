@@ -25,8 +25,11 @@
     flex 1 1 auto
     flex-direction column
     justify-content center
+    margin-top -1em
     list-style none
     margin 0
+    +above($mobile)
+      margin-top 0
     +between($mobile, $tablet)
       justify-content center
     +above($tablet)
@@ -70,36 +73,47 @@
 
 .sub-nav
   position fixed
-  top 30vh
-  left 0px
+  top $main-header-height + 5px
+  left $main-content-left-margin - 40px
+  right 0
+  max-height 35px
   padding-left 10px
-  z-index 1000
+  z-index 100
   display none
   +above($mobile)
     display block
   ul
+    display flex
     list-style none
     padding 0
     font-family 'din'
     text-transform uppercase
     font-size 2em
   a
+    font-size .6em
     color lighten($primary, 75%)
     &:hover
       color $secondary
   li
+    margin-right .5em
+    align-items center
+    line-height normal
     &.active
       a
         disableLink()
 
 .social-nav
+  margin 0 1em 1em
+  opacity 0
+  transition .5s opacity ease-in
+  text-align center
   position fixed
   bottom 0
   left 0
-  margin 0 1em 1em
-  max-width 25%
-  opacity 0
-  transition .5s opacity ease-in
+  text-align left
+  min-width 100%
+  +above($mobile)
+    max-width 25%
   &.active
     opacity 1
   a
@@ -111,9 +125,9 @@
       color $secondary
   > a
     font-family 'din'
-    font-size 2em
     text-transform uppercase
-    margin-bottom -2px
+    margin-bottom -5px
+    font-size 2em
     +above($mobile)
       font-size 3em
   ul
@@ -123,23 +137,37 @@
     font-size 2em
     &:first-of-type
       margin-right .75em
+    &:last-of-type
+      margin-right 0
 
 body:not(.home)
   .social-nav
-    min-height 75px
-    bottom 0
-    left 0
+    position static
     margin 0
-    display flex
-    flex-direction column
-    justify-content flex-end
     opacity 1
     padding 15px
-    min-width 110px
+    margin-bottom 2em
+    text-align center
+    ul
+      justify-content center
     > a
-      font-size 1.25em
+      font-size 2em
+      +above($mobile)
+        font-size 1.25em
     li
-      font-size 1.1em
+      font-size 2em
+      +above($mobile)
+        font-size 1.1em
+    +above($mobile)
+      position fixed
+      bottom 0
+      left 0
+      min-height 75px
+      min-width 110px
+      text-align left
+      margin-bottom 0
+      ul
+        justify-content flex-start
 
 body
   &:not(.artist)

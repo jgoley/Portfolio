@@ -1,4 +1,5 @@
 $photog-white = #ACA88F
+$photog-black = darken($photog-white, 90%)
 
 darkTransition()
   transition background 1s
@@ -67,13 +68,13 @@ darkTransition()
             color black
 .artist
   .page-title
-    color darken($photog-white, 90%)
+    color $photog-black
   .sub-nav
     li
       a
         color darken(desaturate($photog-white, 80%), 30%)
         &:hover
-          color white
+          color lighten($photog-white, 10%)
       &.active
         a
           color $photog-white
