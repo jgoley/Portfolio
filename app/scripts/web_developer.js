@@ -28,7 +28,6 @@ var primaryProjects = [
   },
   {
     title: 'Pollinate',
-    url: 'http://jgoley.github.io/Pollinate/',
     githubUrl: 'https://github.com/jgoley/Pollinate',
     appUrl: '',
     description: 'An application that helps farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper\'s operation then make a request for hives. Users can review and message each other.',
@@ -82,7 +81,6 @@ var secondaryProjects = [
   },
   {
     title: 'Tater',
-    url: 'https://tater.io/',
     githubUrl: '',
     appUrl: '',
     description: 'An easy to use annotation application that allows users to code, analyze and cross-analyze, store, and export text data.',
@@ -163,6 +161,23 @@ class WebsiteVideo extends React.Component {
 class WebProject extends React.Component {
 
 
+
+  interwebsUrl() {
+    let project = this.props.project
+    if (project.url) {
+      return (
+        <li>
+          <a href={project.url} >
+            <i className='fa fa-globe'></i>
+            On the Interwebs
+          </a>
+        </li>
+      )
+    }
+    else
+      return null
+  }
+
   otherUrl(type) {
     let project = this.props.project
     let linkText = ''
@@ -208,12 +223,7 @@ class WebProject extends React.Component {
                   Github Repo
                 </a>
               </li>
-              <li>
-                <a href={project.url} >
-                  <i className='fa fa-globe'></i>
-                  On the Interwebs
-                </a>
-              </li>
+              { this.interwebsUrl() }
               { this.otherUrl('appUrl') }
               { this.otherUrl('backlogUrl', false) }
             </ul>
