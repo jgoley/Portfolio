@@ -1,0 +1,183 @@
+.show-menu
+  &::before
+    content '\f0c9'
+    font-family 'FontAwesome'
+
+.home
+  #main-nav
+    li
+      transition .5s opacity
+      opacity 0
+    &.active
+      li
+        opacity 1
+
+.page-nav
+  flex 1 1 auto
+  display flex
+  padding-bottom 15vh
+  display flex
+  flex 1
+  +above($mobile)
+    padding 0
+  ul
+    display flex
+    flex 1 1 auto
+    flex-direction column
+    justify-content center
+    margin-top -1em
+    list-style none
+    margin 0
+    +above($mobile)
+      margin-top 0
+    +between($mobile, $tablet)
+      justify-content center
+    +above($tablet)
+      justify-content space-around
+  li
+    display flex
+    align-items center
+    font-family din
+    text-transform uppercase
+    text-align right
+    +above($mobile)
+      margin 0
+  a
+    flex 1 1 auto
+    text-overflow clip
+    display block
+    align-items center
+    color #CCC
+    padding .25em 25px 0 10px
+    line-height 1
+    transition .1s ease-in-out
+    border-top-left-radius $border-radius
+    border-bottom-left-radius $border-radius
+    &.sized
+      opacity 1
+    +below($tablet)
+      height auto !important
+      font-size 6em !important
+    +below($mobile)
+      font-size 3em !important
+    +above($mobile)
+      white-space nowrap
+    &:hover
+    &:focus
+      color $secondary
+      box-shadow none
+      outline 0
+      padding-right 30px
+    &:active
+      color $primary
+
+.sub-nav
+  position fixed
+  top $main-header-height + 5px
+  left $main-content-left-margin - 40px
+  right 0
+  max-height 35px
+  padding-left 10px
+  z-index 100
+  display none
+  +above($mobile)
+    display block
+  ul
+    display flex
+    list-style none
+    padding 0
+    font-family 'din'
+    text-transform uppercase
+    font-size 2em
+  a
+    font-size .6em
+    color lighten($primary, 75%)
+    &:hover
+      color $secondary
+  li
+    margin-right .5em
+    align-items center
+    line-height normal
+    &.active
+      a
+        disableLink()
+
+.social-nav
+  margin 0 1em 1em
+  opacity 0
+  transition .5s opacity ease-in
+  text-align center
+  position fixed
+  bottom 0
+  left 0
+  text-align left
+  +above($mobile)
+    max-width 25%
+  &.active
+    opacity 1
+  a
+    color #CCC
+    font-size .93em
+    +above($mobile)
+      font-size 1em
+    &:hover
+      color $secondary
+  > a
+    font-family 'din'
+    text-transform uppercase
+    margin-bottom -5px
+    font-size 2em
+    +above($mobile)
+      font-size 3em
+  ul
+    display flex
+  li
+    margin-right .5em
+    font-size 2em
+    &:first-of-type
+      margin-right .75em
+    &:last-of-type
+      margin-right 0
+
+body:not(.home)
+  .social-nav
+    position static
+    margin 0
+    opacity 1
+    padding 15px
+    margin-bottom 2em
+    text-align center
+    min-width 100%
+    ul
+      justify-content center
+    > a
+      font-size 2em
+      +above($mobile)
+        font-size 1.25em
+    li
+      font-size 2em
+      +above($mobile)
+        font-size 1.1em
+    +above($mobile)
+      position fixed
+      bottom 0
+      left 0
+      min-height 75px
+      min-width 110px
+      text-align left
+      margin-bottom 0
+      ul
+        justify-content flex-start
+
+body
+  &:not(.artist)
+    .social-nav
+      background linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%)
+  &.artist
+    .social-nav
+      background linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)
+  &.transitioning
+    .social-nav
+      transition none
+      transition-delay 0
+      opacity 0

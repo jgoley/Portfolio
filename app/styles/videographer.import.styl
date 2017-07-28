@@ -1,0 +1,24 @@
+.video-wrapper
+  padding-right 0
+  background #f9f9f9
+  align-items center
+  +above($mobile)
+    margin-right 1em
+  +above($tablet)
+    display flex
+    margin-right 0
+  > div
+    padding 1em 1.5em
+    +above($tablet)
+      width 40%
+  h1
+    font-size 1.25em
+  p
+    max-width 800px
+
+iframe
+  border 0
+  width 100%
+  +above($tablet)
+    width 60%
+    margin 0

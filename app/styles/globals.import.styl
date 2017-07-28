@@ -1,0 +1,159 @@
+body
+ul
+  padding 0
+  margin 0
+
+body
+  padding-top 55px
+  font-family 'Rubik'
+
+p
+  line-height 1.5em
+  margin-top 0
+  color $text
+
+a
+  text-decoration none
+  color $link
+  &:hover
+    color $link-hover
+
+ul
+  list-style none
+  li
+    color $text
+    line-height 1.5em
+
+h1
+h2
+h3
+  font-family 'din'
+  margin 0
+  letter-spacing .03em
+
+h1
+  font-size 2.5em
+  color $secondary
+  text-transform uppercase
+  +below($mobile)
+    font-size 2em
+h2
+  font-size 1.5em
+  color $text-secondary
+  text-transform uppercase
+  +below($mobile)
+    font-size 1.25em
+
+h3
+  font-family 'Rubik'
+  font-weight normal
+  margin-bottom .25em
+  color $text
+
+section
+  padding 0 1em
+  +above($mobile)
+    width calc(100% - $main-content-left-margin)
+    margin-left $main-content-left-margin
+    padding 0 1em 0 0
+
+article
+  margin-bottom 3em
+  +above($mobile)
+    padding-right 3em
+  p
+    +above($tablet)
+      max-width 75%
+  ul
+    margin-bottom 1em
+    font-size .9em
+    color darken($text-secondary, 20%)
+  .images
+    display flex
+    flex-wrap wrap
+    li
+      margin-bottom 1em
+      +above($mobile)
+        min-width 50%
+      img
+        min-width 98%
+  .links
+    display flex
+    flex-wrap wrap
+    flex-direction column
+    +above($mobile)
+      flex-direction row
+    i
+      margin-right .5em
+      font-size 1.5em
+    a
+      display flex
+      align-items center
+    li
+      display flex
+      align-items center
+      margin-bottom .5em
+      +above($mobile)
+        margin-bottom 0
+        &:not(:last-of-type)
+          &:after
+            margin 0 1em
+            content '|'
+            color #CCC
+
+.primary
+  margin-bottom 3em
+  +above($mobile)
+    margin-bottom 5em
+
+.secondary
+  display flex
+  flex-wrap wrap
+  margin-top 1em
+  article
+    padding 0
+    margin-bottom 2em
+    max-width 100%
+    +above($tablet)
+      max-width 50%
+    > div
+      font-size 90%
+      +above($mobile)
+        padding-right 3em
+  p
+    max-width 100%
+  h1
+    font-size 1.75em
+    color $primary
+    +below($mobile)
+      font-size 1.5em
+  ul
+    margin-bottom 1em
+    font-size .9em
+    color darken($text-secondary, 20%)
+
+.page-title
+  font-family 'din'
+  text-transform uppercase
+  transform rotate(90deg)
+  transform-origin left
+  font-size 10em
+  color $title-secondary
+  margin 0
+  top -40px
+  left 50px
+  position fixed
+  display none
+  white-space nowrap
+  overflow hidden
+  +above($mobile)
+    display block
+
+.list-set
+  display flex
+  ul
+    margin-right 3em
+    list-style-type circle
+    margin-left 15px
+  li
+    margin-bottom 1px

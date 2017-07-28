@@ -1,0 +1,34 @@
+.home
+  padding 0
+  .badge
+    +above($mobile)
+      background url(../images/badge_no-name.svg) no-repeat
+    +above($tablet)
+      display block
+      right 25px
+      left auto
+  .jgo-name
+    +between($mobile, $tablet)
+      display block
+      &:hover
+        margin-right 5px
+
+  header
+    position static
+
+  .page-nav
+    ul
+      overflow hidden
+    li
+      +above($tablet)
+        &:first-of-type
+          flex 1 1 $primaryRole
+          height $primaryRole
+          text-align left
+          align-self flex-start
+        a
+          &:hover
+            padding-left 15px
+      +above($tablet)
+        flex 1 1 $otherRoles
+        height $otherRoles

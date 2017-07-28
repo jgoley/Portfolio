@@ -1,0 +1,30 @@
+#about
+  margin-top 2em
+  margin-bottom 0
+  +above($mobile)
+    margin-top 1em
+  article
+    p
+      +above($mobile)
+        width 90%
+        max-width 800px
+  img
+    max-width 200px
+    float left
+    padding-right 1em
+  ul
+    font-size 1em
+    +above($mobile)
+      width 85%
+      max-width 650px
+    li
+      list-style-type circle
+      margin-bottom 1em
+      color $body
+      margin-left 15px
+
+.about
+  .social-nav
+    > a
+      color $primary
+      disableLink()

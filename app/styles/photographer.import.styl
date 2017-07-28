@@ -1,0 +1,101 @@
+$photog-white = #ACA88F
+$photog-black = darken($photog-white, 90%)
+
+darkTransition()
+  transition background 1s
+
+.photographer
+  transition background 1s
+  header
+    border-bottom 2px solid white
+    color $photog-white
+  img
+    max-width 100%
+    display block
+    margin 0 auto 50px auto
+    +above($mobile)
+      max-width 650px
+      max-height 700px
+      margin-bottom 100px
+  section
+    opacity 0
+    transition transform 1.5s, opacity .2s
+    transform translateY(-100px)
+    margin-top 1em
+    +below($mobile)
+      margin-left 2%
+      margin-right 2%
+  .page-title
+    transition 1s
+  .page-nav
+    ul
+      justify-content center
+    li
+      +above($tablet)
+        width 100vw
+        font-size 8em
+    a
+      opacity 1
+  .sub-nav
+  .social-nav
+  .social-nav a
+    transition-delay 1.5s
+    transition 1s
+
+  &.artist
+    background black
+    section
+      transition-delay 1s
+    header
+      background black
+      darkTransition()
+      border-bottom 3px solid $photog-white
+      .badge
+        background url(../images/badge_photog-white.svg) no-repeat
+
+      li
+      h1
+        color $photog-white
+      li
+        a
+          color $photog-white
+          &:hover
+            border-color $photog-white
+            box-shadow inset 0px -5px 0 $photog-white
+        &.active
+          a
+            background $photog-white
+            color black
+.artist
+  .page-title
+    color $photog-black
+  .sub-nav
+    li
+      a
+        color darken(desaturate($photog-white, 80%), 30%)
+        &:hover
+          color lighten($photog-white, 10%)
+      &.active
+        a
+          color $photog-white
+
+  .show-menu
+    color $photog-white
+
+  .social-nav
+    a
+      color darken($photog-white, 75%)
+      &:hover
+        color darken($photog-white, 25%)
+
+.documentarian
+.artist
+  darkTransition()
+  section
+    transition transform 1.5s, opacity 1s
+    opacity 1
+    transform translateY(0)
+
+.documentarian
+  section
+    transition-delay .3s
