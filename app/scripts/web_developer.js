@@ -30,7 +30,7 @@ var primaryProjects = [
     title: 'Pollinate',
     githubUrl: 'https://github.com/jgoley/Pollinate',
     appUrl: '',
-    description: 'An application that helps farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper\'s operation then make a request for hives. Users can review and message each other.',
+    description: 'An application that helps connect farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper\'s operation then make a request for hives. Users can review and message each other.',
     type: 'primary',
     roles: ['UX/UI Design', 'Full-Stack Development'],
     tech: ['Backbone.js', 'Parse'],
