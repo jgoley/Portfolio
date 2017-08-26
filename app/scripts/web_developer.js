@@ -11,7 +11,6 @@ var primaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'AWS', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: 'images/eidr-connect.mov',
     order: 1
   },
   {
@@ -24,7 +23,19 @@ var primaryProjects = [
     tech: ['React', 'Meteor.js', 'MongoDb', 'AWS', 'JSX', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: 'images/eidr-connect.mov'
+    order: 2
+  },
+  {
+    title: 'Atom autocomplete for Meteor packages',
+    githubUrl: 'https://github.com/jgoley/atom-autocomplete-meteor-packages',
+    url: 'https://atom.io/packages/autocomplete-meteor-packages',
+    description: 'Atom Editor package that helps Meteor.js users when importing packages to project. Reads versions or packages file in Meteor projects and offers autocomplete suggestions when importing Meteor packages (using require or import) or including packages in package.js with api.use(.... The package name is automatically prepended with meteor/ when importing.',
+    type: 'primary',
+    roles: ['Development'],
+    tech: ['Atom Editor API', 'CoffeeScript'],
+    openSource: true,
+    images: [],
+    order: 3
   },
   {
     title: 'Pollinate',
@@ -36,7 +47,6 @@ var primaryProjects = [
     tech: ['Backbone.js', 'Parse'],
     openSource: true,
     images: [],
-    video: 'images/eidr-connect.mov'
   },
 ]
 var secondaryProjects = [
@@ -51,7 +61,6 @@ var secondaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: ''
   },
   {
     title: 'FLIRT',
@@ -64,7 +73,6 @@ var secondaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: ''
   },
   {
     title: 'NIAM',
@@ -77,7 +85,6 @@ var secondaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: ''
   },
   {
     title: 'Tater',
@@ -89,7 +96,7 @@ var secondaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: ''
+    order: 2
   },
   {
     title: 'Global Ranavirus Reporting System',
@@ -102,7 +109,6 @@ var secondaryProjects = [
     tech: ['Meteor.js', 'MongoDb', 'CoffeeScript', 'Jade/Pug', 'Stylus'],
     openSource: true,
     images: [],
-    video: ''
   },
 ]
 
