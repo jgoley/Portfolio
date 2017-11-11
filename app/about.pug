@@ -10,27 +10,7 @@ html(lang='')
     link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,700' rel='stylesheet')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   body.about
-    header
-      a(href="/")
-        span.badge
-      a(href="/")
-        h1.jgo-name Jonathan Goley
-      nav#main-nav
-        button.show-menu 
-        ul
-          li
-            a(href='web-developer.html')
-              span Web Developer
-          li
-            a(href='photographer/')
-              span Photographer
-          li
-            a(href='videographer.html')
-              span Videographer
-          li
-            a(href='designer.html')
-              span Designer
-          li.exit
+    header#header-main
     h1.page-title About
     section#about
       h1
@@ -45,10 +25,13 @@ html(lang='')
           | High school exposed me to the two interests with which I have devoted much of my life: photography and coding. I developed a simple point of sale program in BASIC for an imaginary pizza joint and spent hours in the school's darkroom watching silver coalesce into an image.
           
         p
-          | Initially I chose coding as the interest I wanted to turn into a career. But, I had not matured out of the timid child I was. After a year as a computer science major I switched to studio art (photography). This degree lead to a job at the #[a(href='http://columbiamuseum.org') Columbia Museum of Art] where I began as a preparator (art handler). Somewhere between installing Renoirs, Monets and other incomprehensibly valued artwork, I started working on the museum's website. This started me back on the track I left as a college freshman. My tenure lasted about 9 years but I still have a foot in the door helping with the technical side of thigs of #[a(href='http://tours.columbiamuseum.org/') TAP into CMA].
+          | Initially I chose coding as the interest I wanted to turn into a career. But, I had not matured out of the timid child I was. After a year as a computer science major I switched to studio art (photography). This degree lead to a job at the #[a(href='http://columbiamuseum.org') Columbia Museum of Art] where I began as a preparator (art handler). Somewhere between installing Renoirs, Monets and other incomprehensibly valued artwork, I started working on the museum's website. This started me back on the track I left as a college freshman. My tenure lasted about 9 years but I still have a foot in the door helping with the technical side of things of #[a(href='http://tours.columbiamuseum.org/') TAP into CMA].
         
         p
-          | Currently I'm living in Brooklyn and working across the East River in Manhattan at a nonprofit called #[a(href='http://ecohealthalliance.org') EcoHealth Alliance]. I'm officially the Front End Developer, but ocassionally put my multimedia skills to practice on trips around the world producing content to help document and promote the organization's mission.
+          | Currently I'm living in Brooklyn. After nearly 3 years of working across the East River in Manhattan at a nonprofit called #[a(href='http://ecohealthalliance.org') EcoHealth Alliance] as a Front End Developer / Designer / Photogher / Videographer, I took a remote job as interface designer &amp; developer at #[a(href='//greenriver.com') Green River], a software development company based in Southern Vermont.
+          
+        p
+          | One of my goals in day-to-day life is to leave whatever I work on, contribute to, or exist in better than I found it. It's my hope that through my professional work and by more simple acts like volunteering or picking up trash on the trail, I achieve this goal.
         
       article
         h2 Other tidbits:
@@ -58,27 +41,13 @@ html(lang='')
           li
             | To satisfy my curiosity and respect for nature I became a beekeeper which began when a 3 pound package of honeybees (10-12 thousand stinging insects) was placed in the backseat of my car.
           li
-            | To satisfy my inner-Muir I've done epic solo backpacking trips in Glacier NP, Rocky Mountain NP, ADK, The Whites, Catskills and all over western NC.
+            | To satisfy my inner-Muir I've done epic solo backpacking trips in Glacier NP, Rocky Mountain NP, Olympic NP, ADK, The Whites, Catskills and all over western NC.
           li
             | To satisfy my love of photography I taught myself a 19th-century process called wet plate collodion. #[a(href='/photographer/artist.html') Here's a sampling of my photos]
           li
             | And to satisfy my other miscellaneous interests I listen to NPR religiously, play disc golf and play guitar (along with a few other instruments).
             
-    nav.social-nav
-      a(href='/about.html') About J.Go
-      ul
-        li
-          a(href='mailto:jgoley@gmail.com' title='Email')
-            i.fa.fa-envelope
-        li
-          a(href='https://github.com/jgoley' title='Github')
-            i.fa.fa-github-square
-        li
-          a(href='https://twitter.com/jgoley' title='Twitter') 
-            i.fa.fa-twitter-square
-        li
-          a(href='https://www.linkedin.com/in/jgoley/' title='LinkedIn') 
-            i.fa.fa-linkedin-square
+    nav#social-nav.social-nav
             
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -89,5 +58,7 @@ html(lang='')
       ga('create','UA-3725995-7');ga('send','pageview');
       
     script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js')
+    script(crossorigin src='https://unpkg.com/react@16/umd/react.production.min.js')
+    script(crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js')
     script(src='scripts/main.js')
     

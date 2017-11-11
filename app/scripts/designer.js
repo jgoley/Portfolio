@@ -24,7 +24,7 @@ class Designer extends React.Component {
 
 class DesignProjects extends React.Component {
   renderChildren() {
-    var children = this.props.projects.map((project, i)=>{
+    let children = this.props.projects.map((project, i)=>{
       return(<DesignProject project={project} key={i}/>)
     })
     return children
