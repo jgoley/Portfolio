@@ -90,121 +90,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     transition('documentarian')
 })
 
-class SocialNavItem extends React.Component {
-  render() {
-    let item = this.props.item
-    return (
-      <li>
-        <a href={item.url} title={item.title} >
-          <i className={`fa fa-${item.icon}`}></i>
-        </a>
-      </li>
-    )
-  }
-}
-
-class SocialNav extends React.Component {
-  renderChildren() {
-    let children = []
-    let childrenData = [
-      {url:'mailto:jgoley@gmail.com', title:'Email', icon:'envelope'},
-      {url:'https://github.com/jgoley', title:'Github', icon:'github-square'},
-      {url:'https://twitter.com/jgoley', title:'Twitter', icon:'twitter-square'},
-      {url:'https://www.linkedin.com/in/jgoley/', title:'LinkedIn', icon:'linkedin-square'}
-    ]
-    childrenData.forEach((link)=> {
-      children.push(<SocialNavItem item={link} />)
-    })
-    return children
-  }
-
-  render() {
-    return ([
-      <a href='/about.html'>About J.Go</a>,
-      <ul>{ this.renderChildren() }</ul>
-    ])
-  }
-}
-
-class HeaderNavItem extends React.Component {
-  isActive(url) {
-    let path = getPagePath()
-    let title =  this.props.item.pageTitle.replace(' ', '-').toLowerCase()
-    if (path.includes(title)) {
-      return 'active'
-    } else
-      return ''
-  }
-
-  relativePath() {
-    let path = getPagePath()
-    let relativePath = ""
-    path = path.match(/\//g)
-    if (typeof path === 'object' && path.length > 1)
-      path.pop()
-      path.forEach(()=> relativePath += '../')
-    return relativePath += this.props.item.url
-  }
-
-  render() {
-    let item = this.props.item
-    return(
-      <li className={this.isActive()}>
-        <a href={this.relativePath()}>
-          <span>{item.pageTitle}</span>
-        </a>
-      </li>
-    )
-  }
-}
-
-class HeaderNav extends React.Component {
-  show() {
-    if (getPagePath() !== '/') return true
-    else return false
-  }
-
-  renderChildren() {
-    let children = []
-    let navItems = [
-      {url: 'web-developer.html', pageTitle: 'Web Developer'},
-      {url: 'photographer/', pageTitle: 'Photographer'},
-      {url: 'videographer.html', pageTitle: 'Videographer'},
-      {url: 'designer.html', pageTitle: 'Designer'}
-    ]
-    navItems.forEach((item)=> {
-      children.push(<HeaderNavItem item={item} />)
-    })
-    return children
-  }
-
-  render() {
-    if (this.show()) {
-      return(
-        <nav id="main-nav">
-          <button class="show-menu"></button>
-          <ul>
-            {this.renderChildren()}
-            <li className='exit' />
-          </ul>
-        </nav>
-      )
-    } else
-      return null
-  }
-}
-
-class Header extends React.Component {
-  render() {
-    return ([
-      <a href="/"><span class="badge"></span></a>,
-      <a href="/"><h1 class="jgo-name">Jonathan Goley</h1></a>,
-      <HeaderNav />
-    ])
-  }
-}
-
-
 ReactDOM.render(
   <Header />,
   header
@@ -214,7 +99,6 @@ ReactDOM.render(
   <SocialNav />,
   document.getElementById('social-nav')
 )
-
 
 try {
   console.log('%c    ___        ________   ________ \n    |\\  \\      |\\   ____\\ |\\   __  \\ \n    \\ \\  \\     \\ \\  \\___| \\ \\  \\|\\  \\ \n  __ \\ \\  \\     \\ \\  \\  ___\\ \\  \\\\\\  \\ \n |\\  \\\\_\\  \\  ___\\ \\  \\|\\  \\\\ \\  \\\\\\  \\   \n \\ \\________\\|\\__\\\\ \\_______\\\\ \\_______\\ \n  \\|________|\\|__| \\|_______| \\|_______| \n\n\n %cHey, How\'s it going?\n\n Email: %cjgoley@gmail.com \n %cGithub: %chttp://github.com/jgoley \n %cTwitter: %chttp://twitter.com/jgoley \n ', 'color:rgba(242, 100, 66, 1)', 'color:rgba(90, 102, 107, 1);', 'color:rgba(136, 136, 136, 1)', 'color:rgba(90, 102, 107, 1)', 'color:rgba(136, 136, 136, 1)', 'color:rgba(90, 102, 107, 1)', 'color:rgba(136, 136, 136, 1)')

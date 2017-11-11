@@ -1,17 +1,31 @@
 // generated on 2017-02-13 using generator-gulp-webapp 1.1.1
+import fs from 'fs';
+import path from 'path';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import concat from 'gulp-concat'
+import concatMulti from 'gulp-concat-multi'
 import minify from 'gulp-minify'
 import deploy from 'gulp-gh-pages'
 import babel from 'gulp-babel'
+import debug from 'gulp-debug'
+import tap from 'gulp-tap'
+import cleanCSS from 'gulp-clean-css'
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const options = {};
+const scriptsPath = 'app/scripts'
+
+
+function getFolders(dir) {
+  return fs.readdirSync(dir).filter(function(file) {
+    return fs.statSync(path.join(dir, file)).isDirectory();
+  });
+}
 
 gulp.task('deploy', ['build'], () => {
   return gulp.src('dist/**/*')
@@ -25,19 +39,32 @@ gulp.task('styles', () => {
     .pipe($.stylus({
       paths: ['.']
     }))
+    .pipe(cleanCSS())
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/styles'))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.react())
-    .pipe(babel({presets: ['es2015']}))
-    .pipe($.uglify())
-    .pipe(gulp.dest('dist/scripts/'))
-    .pipe(reload({stream: true}));
+  let pageScriptsPath = `${scriptsPath}/page_scripts`
+  getFolders(pageScriptsPath).forEach((dir) => {
+    return concatMulti(
+        {
+          [`${dir}.js`]: [
+            `${scriptsPath}/vendor/*.js`,
+            `${scriptsPath}/components/*.js`,
+            `${scriptsPath}/*.js`,
+            `${pageScriptsPath}/${dir}/**/*.js`,
+          ]
+        }
+      )
+      .pipe($.plumber())
+      .pipe($.react())
+      .pipe(babel({presets: ['es2015']}))
+      .pipe($.uglify())
+      .pipe(gulp.dest('dist/scripts/'))
+      .pipe(reload({stream: true}));
+  })
 });
 
 gulp.task('views', () => {
