@@ -1,40 +1,24 @@
-doctype html
-html(lang='')
-  head
-    meta(charset='utf-8')
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Jonathan Goley - Photographer - Documentarian
-    link(rel='apple-touch-icon', href='apple-touch-icon.png')
-    link(rel='stylesheet', href='../styles/main.css')
-    link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,700' rel='stylesheet')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-  body.photographer
-    header#header-main
-    h1.page-title Photographer
-    
-    nav.sub-nav
-      ul
-        li
-          a(href="/photographer/artist.html") Artist
-        li.active
-          a(href="/photographer/documentarian.html") Documentarian
-          
-    section#documentarian.container.invisible
-        
-    nav#social-nav.social-nav
-
-    script.
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-3725995-7');ga('send','pageview');
+extends ../views/extends/layout
+  
+append variables
+  - var title='Jonathan Goley - Photographer - Documentarian'
+  - var pageTitle='Documentarian'
+  - var bodyClass='photographer'
+  - var sectionId='documentarian'
+  - var path='../'
+  - var sectionClasses = 'container invisible'
+  
+block append head
+  title Jonathan Goley - Photographer - Documentarian
+  
+append content
+  nav.sub-nav
+    ul
+      li
+        a(href="/photographer/artist.html") Artist
+      li.active
+        a(href="/photographer/documentarian.html") Documentarian
       
-    script(crossorigin src='https://unpkg.com/react@16/umd/react.production.min.js')
-    script(crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js')
-    
+  append scripts
     script(src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/7.2.2/lazyload.min.js')
-    
-    script(src='../scripts/photographer.js')
+    script(src=path + 'scripts/photographer.js')

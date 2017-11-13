@@ -1,0 +1,29 @@
+block variables
+  - var path = ''
+doctype html
+html(lang='')
+  block head
+    head
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      meta(name='description', content='Jonathan Goley - Web Developer, Designer, Photographer, Videographer')
+      link(rel='apple-touch-icon', href='apple-touch-icon.png')
+      link(rel='stylesheet', href=path + "/styles/main.css")
+      link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,700' rel='stylesheet')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+      title= title
+
+  block content
+    body(class=bodyClass load=onLoad)
+      header#header-main
+      if pageTitle
+        h1.page-title= pageTitle
+      section(id=sectionId class=sectionClasses)
+        block page_content
+  
+  block social_nav
+    nav#social-nav.social-nav
+    
+  block scripts
+    script(crossorigin src='https://unpkg.com/react@16/umd/react.production.min.js')
+    script(crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js')
