@@ -1,20 +1,21 @@
-extends views/extends/layout
+extends views/extends/home
 
 append variables
   - var title='Jonathan Goley'
   - var bodyClass='home'
 
 append content
-  nav.page-nav#main-nav
-    ul
-      li
-        a.page(href='web-developer.html') Web Developer
-      li
-        a.page(href='photographer/') Photographer
-      li
-        a.page(href='videographer.html') Videographer
-      li
-        a.page(href='designer.html') Designer
+  main
+  //- nav.page-nav#main-nav
+    //- ul
+    //-   li
+    //-     a.page(href='web-developer.html') Web Developer
+    //-   li
+    //-     a.page(href='photographer/') Photographer
+    //-   li
+    //-     a.page(href='videographer.html') Videographer
+    //-   li
+    //-     a.page(href='designer.html') Designer
 
 append scripts
   script(src='scripts/base.js')
