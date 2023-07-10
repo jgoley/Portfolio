@@ -36,8 +36,9 @@ function getFolders(dir) {
 
 // console.log({ reload });
 
-const _deploy = (cb) => {
+export const deployToGh = (cb) => {
   src("dist/**/*").pipe(deploy(options));
+  cb();
 };
 
 const styles = (cb) => {
