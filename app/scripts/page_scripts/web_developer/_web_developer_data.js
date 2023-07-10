@@ -4,7 +4,7 @@ const primaryProjects = {
     {
       title: "TAP into CMA",
       url: "http://tours.columbiamuseum.org",
-      githubUrl: "https://github.com/jGolightly/museum-tour-web",
+      githubUrl: "https://github.com/jgoley/museum-tour-web",
       appUrl: "https://itunes.apple.com/us/app/tap-into-cma/id1129913149?mt=8",
       backlogUrl: "https://trello.com/b/jlc34JoD/tap",
       description:
@@ -25,7 +25,7 @@ const primaryProjects = {
     {
       title: "Animal Foster Availability Management",
       url: "http://54.175.158.93/",
-      githubUrl: "https://github.com/jGolightly/animal-foster-management",
+      githubUrl: "https://github.com/jgoley/animal-foster-management",
       description:
         "Application allowing animal foster organizations to view fosters who are available to help with animals. Originally developed for NYCACC and in beta.",
       roles: ["UX/UI Design", "Full-Stack Development", "Dev-Ops"],
@@ -44,8 +44,7 @@ const primaryProjects = {
     },
     {
       title: "Atom autocomplete for Meteor packages",
-      githubUrl:
-        "https://github.com/jGolightly/atom-autocomplete-meteor-packages",
+      githubUrl: "https://github.com/jgoley/atom-autocomplete-meteor-packages",
       url: "https://atom.io/packages/autocomplete-meteor-packages",
       description:
         "Atom Editor package that helps Meteor.js users when importing packages to project. Reads versions or packages file in Meteor projects and offers autocomplete suggestions when importing Meteor packages (using require or import) or including packages in package.js with api.use(.... The package name is automatically prepended with meteor/ when importing.",
@@ -57,7 +56,7 @@ const primaryProjects = {
     },
     {
       title: "Pollinate",
-      githubUrl: "https://github.com/jGolightly/Pollinate",
+      githubUrl: "https://github.com/jgoley/Pollinate",
       appUrl: "",
       description:
         "An application that helps connect farmers with beekeepers who offer pollination services. Farmers can search for beekeepers, view details about the costs associated with each beekeeper's operation then make a request for hives. Users can review and message each other.",
@@ -75,7 +74,7 @@ var yakShaving = {
     {
       title: "Dotfiles",
       url: "",
-      githubUrl: "https://github.com/jGolightly/dotfiles",
+      githubUrl: "https://github.com/jgoley/dotfiles",
       appUrl: "",
       description:
         "Collection of dotfiles including custom keyboard remaps using <a href='https://github.com/tekezo/Karabiner-Elements'</a>Karabiner Elements</a>, customly configed window management with <a href='https://github.com/kasper/phoenix'>Phoenix</a> and the typical dotfiles in the yak shavers kit.",

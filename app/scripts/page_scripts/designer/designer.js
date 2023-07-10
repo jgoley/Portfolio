@@ -1,54 +1,34 @@
 var projects = [
   {
-    title: '',
-    description: '',
+    title: "",
+    description: "",
   },
-]
+];
 
-var skills = ['Illustrator', 'InDesign', 'Photoshop']
+var skills = ["Illustrator", "InDesign", "Photoshop", "Figma"];
 
-class Designer extends React.Component {
-  render() {
-    return (
-      <div>
-        <Skills skills={skills} />
-        <h1 className='soon'>
-          <span> Coming</span>
-          <span> Soon</span>
-        </h1>
+const Designer = () => (
+  <div>
+    <Skills skills={skills} />
+    <h1 className="soon">
+      <span> Coming</span>
+      <span> Soon</span>
+    </h1>
+  </div>
+);
 
-      </div>
-    )
-  }
-}
+const DesignProjects = () => (
+  <div>
+    {projects.map((project, i) => (
+      <DesignProject project={project} key={i} />
+    ))}
+  </div>
+);
 
-class DesignProjects extends React.Component {
-  renderChildren() {
-    let children = this.props.projects.map((project, i)=>{
-      return(<DesignProject project={project} key={i}/>)
-    })
-    return children
-  }
-  render() {
-    return (
-      <div>
-        {this.renderChildren()}
-      </div>
-    )
-  }
-}
+const DesignProject = ({ project }) => (
+  <div>
+    <h1>{project.title}</h1>
+  </div>
+);
 
-class DesignProject extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.project.title}</h1>
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(
-  <Designer />,
-  document.getElementById('designer')
-)
+ReactDOM.render(<Designer />, document.getElementById("designer"));

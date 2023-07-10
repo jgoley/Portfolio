@@ -15,19 +15,19 @@ class SocialNav extends React.Component {
   renderChildren() {
     let children = [];
     let childrenData = [
-      { url: "mailto:jGolightly@gmail.com", title: "Email", icon: "envelope" },
+      { url: "mailto:jkgolight@gmail.com", title: "Email", icon: "envelope" },
       {
-        url: "https://github.com/jGolightly",
+        url: "https://github.com/jgoley",
         title: "Github",
         icon: "github-square",
       },
       {
-        url: "https://twitter.com/jGolightly",
+        url: "https://twitter.com/jgoley",
         title: "Twitter",
         icon: "twitter-square",
       },
       {
-        url: "https://www.linkedin.com/in/jGolightly/",
+        url: "https://www.linkedin.com/in/jgoley/",
         title: "LinkedIn",
         icon: "linkedin-square",
       },
