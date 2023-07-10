@@ -13,42 +13,34 @@
         opacity 1
 
 .page-nav
-  flex 1 1 auto
-  display flex
-  padding-bottom 15vh
-  display flex
-  flex 1
   +above($mobile)
     padding 0
+  +above($tablet)
+    margin-top: 20px
   ul
     display flex
     flex 1 1 auto
     flex-direction column
     justify-content center
-    margin-top -1em
     list-style none
     margin 0
     +above($mobile)
       margin-top 0
-    +between($mobile, $tablet)
-      justify-content center
-    +above($tablet)
-      justify-content space-around
   li
     display flex
     align-items center
-    font-family din
+    font-family din, sans-serif
     text-transform uppercase
     text-align right
+    font-size: 30px
     +above($mobile)
       margin 0
+      font-size: 20px
+    +above($tablet)
+      font-size: 65px
   a
-    flex 1 1 auto
-    text-overflow clip
     display block
-    align-items center
-    color #CCC
-    padding .25em 25px 0 10px
+    color white
     line-height 1
     transition .1s ease-in-out
     border-top-left-radius $border-radius
@@ -56,18 +48,19 @@
     &.sized
       opacity 1
     +below($tablet)
-      height auto !important
-      font-size 6em !important
-    +below($mobile)
+      height auto
       font-size 3em !important
+    +below($mobile)
+      font-size 2em !important
     +above($mobile)
       white-space nowrap
     &:hover
     &:focus
-      color $secondary
+      color black
       box-shadow none
       outline 0
-      padding-right 30px
+      +above($tablet)
+        padding-right 30px
     &:active
       color $primary
 
@@ -86,7 +79,7 @@
     display flex
     list-style none
     padding 0
-    font-family 'din'
+    font-family din, sans-serif
     text-transform uppercase
     font-size 2em
   a
@@ -123,7 +116,7 @@
     &:hover
       color $secondary
   > a
-    font-family 'din'
+    font-family din, sans-serif
     text-transform uppercase
     margin-bottom -5px
     font-size 2em

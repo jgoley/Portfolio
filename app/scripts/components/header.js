@@ -28,51 +28,39 @@ class HeaderNavItem extends React.Component {
   }
 }
 
-class HeaderNav extends React.Component {
-  show() {
-    if (getPagePath() !== "/") return true;
-    else return false;
-  }
+const HeaderNav = () => {
+  let navItems = [
+    { url: "web-developer.html", pageTitle: "Web Developer" },
+    { url: "photographer/", pageTitle: "Photographer" },
+    { url: "videographer.html", pageTitle: "Videographer" },
+    { url: "designer.html", pageTitle: "Designer" },
+  ];
 
-  renderChildren() {
-    let children = [];
-    let navItems = [
-      { url: "web-developer.html", pageTitle: "Web Developer" },
-      { url: "photographer/", pageTitle: "Photographer" },
-      { url: "videographer.html", pageTitle: "Videographer" },
-      { url: "designer.html", pageTitle: "Designer" },
-    ];
-    navItems.forEach((item) => {
-      children.push(<HeaderNavItem item={item} />);
-    });
-    return children;
-  }
+  if (getPagePath() !== "/") return null;
 
-  render() {
-    if (this.show()) {
-      return (
-        <nav id="main-nav">
-          <button class="show-menu"></button>
-          <ul>
-            {this.renderChildren()}
-            <li className="exit" />
-          </ul>
-        </nav>
-      );
-    } else return null;
-  }
-}
+  return (
+    <nav id="main-nav">
+      <button class="show-menu"></button>
+      <ul>
+        {navItems.map((item) => (
+          <HeaderNavItem item={item} />
+        ))}
+        <li className="exit" />
+      </ul>
+    </nav>
+  );
+};
 
-class Header extends React.Component {
-  render() {
-    return [
+const Header = () => {
+  return (
+    <header id="main-header">
       <a href="/">
         <span class="badge"></span>
-      </a>,
+      </a>
       <a href="/">
         <h1 class="jgo-name">Jonathan Goley</h1>
-      </a>,
-      <HeaderNav />,
-    ];
-  }
-}
+      </a>
+      <HeaderNav />
+    </header>
+  );
+};

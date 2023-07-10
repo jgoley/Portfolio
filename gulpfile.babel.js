@@ -104,9 +104,7 @@ const images = () => {
 };
 
 const fonts = () => {
-  return src("**/*.{eot,svg,ttf,woff,woff2}")
-    .pipe(dest(".tmp/fonts"))
-    .pipe(dest("dist/fonts"));
+  return src("app/fonts/*.{eot,svg,ttf,woff,woff2}").pipe(dest("dist/fonts"));
 };
 
 const extras = () => {

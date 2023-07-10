@@ -17,14 +17,7 @@ html(lang='')
 
   block content
     body(class=bodyClass load=onLoad)
-      header#header-main
-      if pageTitle
-        h1.page-title= pageTitle
-      section(id=sectionId class=sectionClasses)
-        block page_content
-
-  block social_nav
-    nav#social-nav.social-nav
+      block page_content
 
   block scripts
     script(crossorigin src='https://unpkg.com/react@16/umd/react.production.min.js')

@@ -1,4 +1,38 @@
 .home
+  display: flex
+  align-items: stretch
+  justify-content: stretch
+  min-height: 100%
+  min-width: 100%
+  padding: 0
+
+.home main
+  flex: 1
+  background  $secondary
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  gap: 20px
+  +above($tablet)
+    flex-direction: row
+
+.home .logo
+  flex: 0 1 auto
+  display: flex
+  width: 50vw
+  justify-content: center
+  +above($tablet)
+    flex: none
+    width: 350px
+    justify-content: flex-end
+  img
+    max-height: 40vh
+    +above($tablet)
+      max-height: 50vh
+
+
+.home
   padding 0
   .badge
     +above($mobile)
@@ -16,19 +50,56 @@
   header
     position static
 
-  .page-nav
-    ul
-      overflow hidden
-    li
+  h1
+    color: black
+    font-weight: normal
+    letter-spacing: 0.02em;
+    width: fit-content
+    margin-bottom: 20px
+    font-size: 55px
+    line-height: 1
+    text-align: center
+    &::after
+      content: ""
+      height: 6px
+      background: white
+      border-radius: 3px
+      display: block
       +above($tablet)
-        &:first-of-type
-          flex 1 1 $primaryRole
-          height $primaryRole
-          text-align left
-          align-self flex-start
+        width: calc(100% + 50px)
+        margin-left: -35px
+        display: block
+
+  .page-nav
+    margin-top 20px
+    flex: 0 0 auto
+    padding-right: 30px
+    ul
+      +below($tablet)
+        align-items: center
+    li
+      a
+        transition: all 0.15s ease-in-out
+        -webkit-text-stroke: white 1.5px;
+        text-stroke: white 1.5px;
+        color: #f26442;
+        letter-spacing: 0.02em;
+        &:hover
+          // color: black
+          -webkit-text-stroke: 1.5px black;
+          text-stroke: 1.5px black;
+          +above($tablet)
+            -webkit-text-stroke: 2.5px black;
+            text-stroke: 2.5px black;
+      &:first-of-type
+        a
+          -webkit-text-stroke: 0;
+          text-stroke: 0;
+          color white
+          &:hover
+           color black
+      +above($tablet)
+        position: relative
         a
           &:hover
-            padding-left 15px
-      +above($tablet)
-        flex 1 1 $otherRoles
-        height $otherRoles
+            transform translateX(15px)

@@ -6,16 +6,19 @@ append variables
 
 append content
   main
-  //- nav.page-nav#main-nav
-    //- ul
-    //-   li
-    //-     a.page(href='web-developer.html') Web Developer
-    //-   li
-    //-     a.page(href='photographer/') Photographer
-    //-   li
-    //-     a.page(href='videographer.html') Videographer
-    //-   li
-    //-     a.page(href='designer.html') Designer
+    .logo
+      img(src='/images/badge_no-name.svg' alt='Jonathan Goley')
+    nav.page-nav
+      h1 Jonathan Golightly
+      ul
+        li
+          a.page(href='web-developer.html') Web Developer
+        li
+          a.page(href='photographer/') Photographer
+        li
+          a.page(href='videographer.html') Videographer
+        li
+          a.page(href='designer.html') Designer
 
 append scripts
   script(src='scripts/base.js')
