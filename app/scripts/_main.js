@@ -90,7 +90,7 @@ ReactDOM.render(<SocialNav />, document.getElementById("social-nav"));
 
 try {
   console.log(
-    "%c    ___        ________   ________ \n    |\\  \\      |\\   ____\\ |\\   __  \\ \n    \\ \\  \\     \\ \\  \\___| \\ \\  \\|\\  \\ \n  __ \\ \\  \\     \\ \\  \\  ___\\ \\  \\\\\\  \\ \n |\\  \\\\_\\  \\  ___\\ \\  \\|\\  \\\\ \\  \\\\\\  \\   \n \\ \\________\\|\\__\\\\ \\_______\\\\ \\_______\\ \n  \\|________|\\|__| \\|_______| \\|_______| \n\n\n %cHey, How's it going?\n\n Email: %cjgoley@gmail.com \n %cGithub: %chttp://github.com/jgoley \n %cTwitter: %chttp://twitter.com/jgoley \n ",
+    "%c    ___        ________   ________ \n    |\\  \\      |\\   ____\\ |\\   __  \\ \n    \\ \\  \\     \\ \\  \\___| \\ \\  \\|\\  \\ \n  __ \\ \\  \\     \\ \\  \\  ___\\ \\  \\\\\\  \\ \n |\\  \\\\_\\  \\  ___\\ \\  \\|\\  \\\\ \\  \\\\\\  \\   \n \\ \\________\\|\\__\\\\ \\_______\\\\ \\_______\\ \n  \\|________|\\|__| \\|_______| \\|_______| \n\n\n %cHey, How's it going?\n\n Email: %cjGolightly@gmail.com \n %cGithub: %chttp://github.com/jGolightly \n %cTwitter: %chttp://twitter.com/jGolightly \n ",
     "color:rgba(242, 100, 66, 1)",
     "color:rgba(90, 102, 107, 1);",
     "color:rgba(136, 136, 136, 1)",

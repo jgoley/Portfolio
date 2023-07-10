@@ -58,7 +58,7 @@ const Header = () => {
         <span class="badge"></span>
       </a>
       <a href="/">
-        <h1 class="jgo-name">Jonathan Goley</h1>
+        <h1 class="jgo-name">Jonathan Golightly</h1>
       </a>
       <HeaderNav />
     </header>
