@@ -25,7 +25,7 @@ const { src, dest, series, parallel } = gulp;
 
 const browsersync = browserSync.create();
 
-const options = {};
+const deployOptions = {};
 const scriptsPath = "app/scripts";
 
 function getFolders(dir) {
@@ -37,7 +37,7 @@ function getFolders(dir) {
 // console.log({ reload });
 
 export const deployToGh = (cb) => {
-  src("dist/**/*").pipe(deploy(options));
+  src("dist/**/*").pipe(deploy(deployOptions));
   cb();
 };
 
